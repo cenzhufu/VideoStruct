@@ -1,0 +1,42 @@
+@import '~stassets/styles/index.scss';
+
+$tab-prefix-cls: #{$antd-prefix}-tabs;
+
+.datasource-menu-container {
+	width: getpx(264);
+	height: 100%;
+	background: #424f66;
+
+	:global {
+		.ant-menu-dark {
+			background: #424f66;
+		}
+	}
+}
+
+.datasource-menu-title {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	background: #1c2638;
+	color: #c8d6e4;
+
+	.datasource-menu-title-icon {
+		width: 24px;
+		height: 24px;
+		border: 1px solid red;
+	}
+}
+
+.datasource-menu-name {
+	font-size: 16px;
+}
+
+.datasource-menu-total {
+	display: inline-block;
+	margin-left: 76px;
+	font-size: 16px;
+}

@@ -1,0 +1,336 @@
+@import '~stassets/styles/index.scss';
+
+$layout-prefix-cls: #{$antd-prefix}-layout;
+
+.search-result-wrap {
+	display: flex;
+	flex: auto;
+
+	:global {
+		// 定制antd
+		.#{$layout-prefix-cls} {
+			&-sider {
+				&-children {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+		}
+
+		// .ant-layout-sider-children {
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	height: 100%;
+		// }
+	}
+}
+
+//左边栏
+.search-upload-container {
+	height: 50%;
+	border-bottom: 1px solid $dark-gray;
+}
+
+.search-upload-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	height: 100%;
+
+	.search-upload-list-item {
+		width: getvmin(50);
+		height: getvmin(50);
+		margin-bottom: 16px;
+		margin-right: 8px;
+		// margin: 0 24px 24px 0;
+	}
+
+	.search-upload-add {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: getvmin(120);
+		height: getvmin(120);
+		background: rgba(2, 120, 255, 0.1);
+		border-radius: $card-radius;
+		border: 2px dashed $component-foreground-color;
+	}
+
+	.upload-drop-area {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.camera-icon {
+		width: getvmin(42);
+		color: $component-foreground-color;
+		// width: 42px;
+		// height: 39px;
+	}
+
+	.upload-limit {
+		width: 84px;
+		height: 50px;
+		text-align: center;
+		font-size: getvmin(14);
+		color: $component-foreground-color;
+	}
+}
+
+.search-upload-list-container {
+	height: 50%;
+	padding-top: 36px;
+
+	.search-range {
+		display: flex;
+		justify-content: center;
+		color: $text-color;
+	}
+
+	.change-range {
+		height: 28px;
+		margin-left: 24px;
+		line-height: 28px;
+		text-align: center;
+		font-size: 14px;
+		border-radius: $card-radius;
+		color: $component-foreground-color;
+		border: 1px solid $component-foreground-color;
+		cursor: pointer;
+	}
+
+	.search-range-list {
+		margin-top: 24px;
+
+		.range-list-item {
+			margin-bottom: 24px;
+
+			.list-title {
+				margin-bottom: 12px;
+				font-weight: 500;
+				color: $text-second-color;
+			}
+
+			.list-content {
+				display: flex;
+				flex-wrap: wrap;
+				height: 34px;
+				overflow: hidden;
+			}
+
+			.content-item {
+				width: 96px;
+				height: 26px;
+				// margin-left: $card-radius;
+				margin: $card-radius;
+				line-height: 26px;
+				text-align: center;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				background: $dark-gray;
+				border-radius: 13px;
+				font-size: 12px;
+				font-weight: 400;
+				color: $text-second-color;
+			}
+		}
+	}
+}
+
+.disappeared {
+	visibility: hidden;
+}
+
+//右边栏
+.search-result-filters {
+	position: relative;
+	// padding-bottom: 24px;
+	padding: 0 0 24px 0;
+	background: $component-background-color;
+	color: $text-second-color;
+
+	.search-filter-title {
+		display: inline-block;
+		width: 96px;
+		color: $text-second-color;
+	}
+
+	.search-relate-check {
+		position: absolute;
+		left: 672px;
+		top: 22px;
+		color: $text-second-color;
+	}
+
+	.search-result-accuracy {
+		display: inline-block;
+		width: 60px;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+		border-radius: $card-radius 0 0 $card-radius;
+		border: 1px solid rgba(102, 102, 102, 1);
+		// border: 1px solid $component-foreground-color;
+	}
+
+	.search-result-threshold {
+		display: inline-block;
+		margin-left: 32px;
+
+		.search-result-slider {
+			display: inline-block;
+			position: relative;
+			top: 10px;
+		}
+
+		.search-result-slider-input {
+			display: inline-block;
+			width: 50px;
+		}
+	}
+
+	.search-filter-attribute {
+		width: getvw(160);
+		margin-right: 8px;
+	}
+
+	.search-filter-btn-group {
+		// margin-top: 24px;
+		display: inline-block;
+	}
+
+	.btn {
+		display: inline-block;
+		width: 80px;
+		height: 28px;
+		margin: 0 16px;
+		line-height: 28px;
+		text-align: center;
+		border-radius: $card-radius;
+		color: $component-foreground-color;
+		border: 1px solid $component-foreground-color;
+		cursor: pointer;
+	}
+
+	.btn-primary {
+		background: $component-foreground-color;
+		color: #fff;
+	}
+
+	.filter-collapse-container {
+		display: inline-block;
+		color: $component-foreground-color;
+		cursor: pointer;
+	}
+}
+
+//搜索结果展示
+.result-show-container {
+	z-index: 0;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	// overflow-y: auto;
+	height: 100%;
+	background-color: $background-color;
+	padding-right: 4px;
+
+	// border: 1px solid red;
+	.result-list-panel {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+	}
+
+	.result-body-image-item {
+		width: getvmin(64);
+		height: getvmin(120);
+		margin-left: 12px;
+		border-radius: $card-radius;
+		border: 1px solid $component-foreground-color;
+	}
+
+	.tabs {
+		width: 100%;
+		position: relative;
+	}
+}
+
+.result-list-item {
+	display: flex;
+	// padding-right: 16px;
+	// padding-bottom: 16px;
+}
+
+.no-results {
+	width: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -100px;
+	text-align: center;
+	color: $component-foreground-color;
+}
+
+.no-more-results {
+	margin: 0 auto;
+	height: 34px;
+	margin-top: 20px;
+	text-align: center;
+	border: 1px solid $component-foreground-color;
+	border-radius: $card-radius;
+}
+
+.no-more-results-item {
+	display: inline-block;
+	width: 110px;
+	height: 34px;
+	line-height: 34px;
+}
+
+.preview-title {
+	display: flex;
+
+	.title {
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+}
+
+.uploading-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 64px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10000;
+
+	.uploading {
+		position: relative;
+		width: 400px;
+		height: 400px;
+	}
+}
+
+.display-none {
+	display: none;
+}
+
+.scroll {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.target-type-nav-bar {
+	z-index: $mid-layer-index;
+}

@@ -1,0 +1,93 @@
+@import '~stassets/styles/index.scss';
+
+.cameras-management-container {
+	height: 100%;
+	// background: $component-background-color;
+	border-radius: $card-radius;
+	margin-left: 24px;
+}
+
+.camera-form-container {
+	//TODO:新增表单样式优化
+	:global {
+		.ant-modal {
+			height: 600px;
+		}
+
+		.ant-modal-header {
+			border-bottom: 0;
+			border-radius: $card-radius $card-radius 0 0;
+		}
+
+		.ant-modal-title {
+			color: $text-second-color;
+		}
+
+		.ant-modal-body {
+			text-align: left;
+		}
+
+		.ant-modal-footer {
+			border-top: 0;
+		}
+
+		.ant-select {
+			width: 631;
+		}
+	}
+}
+
+.cameras-tool-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 24px;
+}
+
+.area-select-tip {
+	margin-left: getvw(24);
+}
+
+.camera-search {
+	// width: getvw(520);
+	margin-right: auto;
+	margin-left: getpx(16);
+	height: 32px;
+	background: #f3f4f5;
+	border-radius: $card-radius;
+	flex: 0 0 getpx(320);
+
+	:global {
+		.ant-input {
+			background-color: #f2f4f5;
+		}
+	}
+}
+
+.camera-table-block {
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - 80px);
+}
+
+.camera-table-content {
+	margin-left: 16px;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.camera-table-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: getpx(20);
+	margin-bottom: getpx(20);
+}
+
+.camera-management-title {
+	width: getvw(200);
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+}

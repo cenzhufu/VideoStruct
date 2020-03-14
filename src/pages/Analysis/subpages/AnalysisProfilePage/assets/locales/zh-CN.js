@@ -1,0 +1,39 @@
+const analysisSourceType = {
+	// 数据分析数据源列表页面
+	ANALYSIS_SOURCE_TYPE_ALL: '全部类型',
+
+	ANALYSIS_DATA_ACCESS: '数据接入',
+	ANALYSIS_REALTIME_VIDEO_ACCESS: '接入实时视频',
+	ANALYSIS_OFFLINE_VIDEO_ACCESS: '导入离线视频',
+	ANALYSIS_BATCH_IMAGE_ACCESS: '导入批量图片',
+	ANALYSIS_FILENAME_CAMERA: '文件名/摄像头',
+	ANALYSIS_ACCESS_TIME: '接入时间',
+
+	ANALYSIS_ACCESS_OFFLINE_VIDEO: '接入离线视频',
+	ANALYSIS_ACCESS_ZIP_FILE: '接入批量图片',
+
+	ANALYSIS_PICTURE_NO_BIG_THAN: '单张图片最大支持{size}',
+	ANALYSIS_NO_VALID_PICTURES: '压缩包未包含图片或图片格式不支持',
+
+	ANALYSIS_UNVALID_FILE: '无效的文件',
+
+	ANALYSIS_NO_DATA: '暂无{tip}数据',
+	ANALYSIS_START_ACCESS: '开始接入',
+	ANALYSIS_START_ADD_CAMERA: '添加摄像头',
+
+	ANALYSIS_BATCH_OPERATION: '批量操作',
+	ANALYSIS_BATCVH_VIEW: '批量查看',
+	ANALYSIS_CANCLE_OPERATION: '取消操作',
+
+	ANALYSIS_ALL_STATUS: '全部状态',
+
+	ANALYSIS_VIEW_ALL: '查看全部',
+	ANALYSIS_VIEW_COMPANY: '查看本单位',
+	ANALYSIS_VIEW_MYSELF: '只看自己',
+
+	ABALYSIS_OFFLINE_VIDEO_ACCEPT: '视频文件格式不对，只能导入{accept}格式的文件',
+	ANALYSIS_BATCH_IMAGE_ACCEPT:
+		'批量图片文件格式不对，只能导入{accept}格式的文件'
+};
+
+export default analysisSourceType;

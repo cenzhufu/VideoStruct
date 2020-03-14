@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>警告</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="设计规范" transform="translate(-519.000000, -3926.000000)" fill-rule="nonzero">
+            <g id="删除提示弹窗" transform="translate(494.000000, 3900.000000)">
+                <g id="Group-12" transform="translate(24.000000, 24.000000)">
+                    <g id="警告" transform="translate(0.000000, 1.000000)">
+                        <rect id="Rectangle-path" fill="#000000" opacity="0" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M16,1.23076923 C7.84372037,1.23076923 1.23076923,7.8435831 1.23076923,15.9996934 C1.23076923,24.1564169 7.84372037,30.7692308 16,30.7692308 C24.1568928,30.7692308 30.7692308,24.1564169 30.7692308,15.9996934 C30.7698439,7.8435831 24.157506,1.23076923 16,1.23076923 Z M17.9657971,24.4298814 L14.0348161,24.4298814 L14.0348161,21.0661451 L17.9657971,21.0661451 L17.9657971,24.4298814 Z M17.9657971,18.291645 L14.0348161,18.291645 L14.0348161,7.57011856 L17.9657971,7.57011856 L17.9657971,18.291645 Z" id="Shape" fill="#FF2D3E"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

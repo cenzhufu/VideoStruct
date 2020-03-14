@@ -1,0 +1,10 @@
+@import '~stassets/styles/index.scss';
+.result-threshold {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	background: $dark-gray;
+	border-radius: $card-radius 0 $card-radius 0;
+	color: $text-color;
+}

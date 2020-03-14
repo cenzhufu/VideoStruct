@@ -1,0 +1,6 @@
+export default {
+	MONITOR_INFO_RIDE: '骑行',
+	MONITOR_INFO_MANY_PEOPLE: '密集人群',
+	MONITOR_INFO_FALL_OVER: '跌倒',
+	MONITOR_INFO_DISORDER: '骚乱'
+};

@@ -1,0 +1,42 @@
+@import '~stassets/styles/index.scss';
+
+.scroll-container {
+	height: 100%;
+	overflow: auto;
+	width: 100%;
+}
+
+.scroll {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	padding: 24px 0 24px 24px;
+	width: 100%;
+	height: 100%;
+}
+
+.structural-item-face-info {
+	margin-right: getpx(15);
+	margin-bottom: getpx(16);
+}
+
+.loading-more-indicator {
+	height: getpx(100);
+	position: relative;
+}
+
+.no-results {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.structural-item {
+	margin-right: getpx(16);
+	margin-bottom: getpx(16);
+}

@@ -1,0 +1,4 @@
+export default {
+	SEARCH_TARGET_PANEL_UPLOAD_TIP: '上传/拖拽',
+	SEARCH_TARGET_PANEL_SELECT_IMAGE_TIP: '最多5张'
+};

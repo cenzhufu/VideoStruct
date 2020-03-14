@@ -1,0 +1,280 @@
+@import '~stassets/styles/index.scss';
+
+$tab-prefix-cls: #{$antd-prefix}-tabs;
+// $picker-prefix-cls:#{$antd-prefix}-input;
+// $selection-prefix-cls:#{$antd-prefix}-select-selection;
+// $calendarPicker-prefix-cls:#{$antd-prefix}-calendar-picker;
+
+.previewr {
+	position: relative;
+}
+
+.datasource-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+
+	// flex-direction: column;
+	:global {
+		.ant-layout-sider-children {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.ant-badge-count {
+			background: #c8d6e4;
+		}
+	}
+}
+
+.datasource-acceso-wraper {
+	height: 88px;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center; // line-height: 88px;
+	// text-align: center;
+	border-top: 1px solid $text-color;
+	background: #424f66;
+}
+
+.datasource-type-filter-panel {
+	// background: $component-background-color;
+	// box-shadow: 0 -1px 0 0 $dark-gray;
+	// border-radius: $card-radius;
+	background: #fff;
+	box-shadow: inset 0 -1px 0 0 #c8d6e4;
+}
+
+.datasource-type-bar {
+	position: relative;
+	width: 100%;
+	height: 64px;
+	display: flex;
+	padding-right: 32px;
+
+	.datasource-select-content {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+
+		.realtime-select {
+			background-color: $component-foreground-color;
+
+			&:hover,
+			&:focus {
+				// XXX:
+				// background-color: rgba($component-foreground-color, 0.8);
+				background-color: rgba(#0278ff, 0.8);
+				color: white;
+			}
+
+			&:active {
+				color: white;
+			}
+		}
+
+		.offline-select {
+			background-color: #00cc4b;
+
+			&:hover,
+			&:focus {
+				background-color: rgba(#00cc4b, 0.8);
+				color: white;
+			}
+
+			&:active {
+				color: white;
+			}
+		}
+
+		.batch-select {
+			background-color: #e62465;
+
+			&:hover,
+			&:focus {
+				background-color: rgba(#e62465, 0.8);
+				color: white;
+			}
+
+			&:active {
+				color: white;
+			}
+		}
+	}
+}
+
+.tabs {
+	:global {
+		// 定制antd
+		.#{$tab-prefix-cls} {
+			&-nav {
+				height: 64px;
+
+				.#{$tab-prefix-cls}-tab {
+					height: 64px;
+					line-height: 64px;
+					margin: 0 64px 0 0;
+					padding: 0;
+					font-size: 16px;
+				}
+			}
+
+			&-bar {
+				border-bottom: unset;
+			}
+		}
+	}
+}
+
+.datasource-select-tip {
+	margin-right: 16px;
+}
+
+.datasource-select {
+	border-radius: 100px !important;
+	border: unset !important;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	color: white !important;
+
+	&:not(:last-child) {
+		margin-right: 16px;
+	}
+}
+
+.datasource-filter-panel {
+	height: 88px;
+	border-top: 1px solid #3e454f;
+	display: flex;
+	align-items: center;
+	padding: 0 32px;
+
+	// :global {
+	// 	.#{$picker-prefix-cls} {
+	// 		background-color: #F2F4F5;
+	// 		border-color: transparent;
+	// 		border-radius: 0px;
+	// 	}
+
+	// 	.#{$selection-prefix-cls} {
+	// 		background-color: #F2F4F5;
+	// 		border-color: transparent;
+	// 		border-radius: 0px;
+	// 	}
+
+	// 	.#{$selection-prefix-cls}:hover,
+	// 	.#{$calendarPicker-prefix-cls}:hover,
+	// 	.#{$picker-prefix-cls}:hover {
+	// 		border-color: transparent;
+	// 	}
+
+	// 	.#{$selection-prefix-cls}:active {
+	// 		border-color: transparent;
+	// 	}
+
+	// 	.#{$selection-prefix-cls}:focus,
+	// 	.#{$calendarPicker-prefix-cls}:hover,
+	// 	.#{$picker-prefix-cls}:hover {
+	// 		border-color: transparent;
+	// 	}
+	// }
+}
+
+.search-input {
+	// 520 / 1920
+	width: 27% !important;
+}
+
+.access-date {
+	// margin-left: auto;
+	margin-right: 16px;
+}
+
+.range-picker {
+	margin-right: 28px !important;
+}
+
+.status-select {
+	margin-right: 16px !important;
+}
+
+.view-scope-select {
+	margin-right: 32px !important;
+}
+
+.cancel-button {
+	background-color: unset !important;
+	border: 1px solid #ff3c2f !important;
+	color: #ff3c2f !important;
+	margin-right: 16px;
+}
+
+.batch-operation-button {
+	background-color: unset !important;
+	border: 1px solid $component-foreground-color !important;
+	color: $component-foreground-color !important;
+}
+
+.batch-operation-button-disabled {
+	border: 1px solid gray !important;
+	color: gray !important;
+	opacity: 0.5;
+}
+
+.datasource-content {
+	display: flex;
+	flex: 1 1 auto;
+	height: 100%;
+	flex-direction: column;
+	position: relative;
+}
+
+.empty-data-history-tip {
+	color: #989ca6;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.datasource-list {
+	position: relative;
+	height: 100%;
+	margin: 32px 0;
+	overflow-y: auto;
+
+	& .list-item:not(:last-child) {
+		margin-bottom: 24px;
+	}
+}
+
+.datasource-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.preview-title {
+	display: flex;
+
+	.title {
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+}
+
+.empty-icon {
+	width: calc(11vmin + 120px) !important;
+	height: calc(11vmin + 120px) !important;
+}
+
+.tip-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="816px" height="286px" viewBox="0 0 816 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M10,18 L390.32783,18 L408,0.214632988 L428.561167,18 L806,18 C811.522847,18 816,22.4771525 816,28 L816,276 C816,281.522847 811.522847,286 806,286 L10,286 C4.4771525,286 6.76353751e-16,281.522847 0,276 L1.77635684e-15,28 C-1.35263389e-15,22.4771525 4.4771525,18 10,18 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="816" height="285.785367" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2" stroke-dasharray="4">
+        <g id="接入成功-到全部类型管理" transform="translate(-185.000000, -46.000000)" fill="#0278FF" stroke="#0278FF" stroke-width="4">
+            <g id="搜索弹窗-copy" transform="translate(185.000000, 46.000000)">
+                <g id="Rectangle-12">
+                    <use mask="url(#mask-2)" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

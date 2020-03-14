@@ -1,0 +1,131 @@
+@import '~stassets/styles/index.scss';
+
+@mixin custom-scrollbar() {
+	&::-webkit-scrollbar {
+		width: getpx(8);
+		height: getpx(1);
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 4px;
+		height: getpx(40);
+		background: #c8d6e4;
+	}
+	&::-webkit-scrollbar-track {
+		background: #fff;
+		box-shadow: none;
+	}
+}
+
+.path-panel-container {
+	background: #fff;
+	box-shadow: 0 0 16px 0 rgba(34, 47, 62, 0.3);
+	z-index: 999;
+	cursor: default;
+}
+.path-panel-title {
+	width: getpx(96);
+	height: getpx(40);
+	font-size: getpx(14);
+	color: $text-dark-color;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+	box-sizing: border-box;
+	.close-btn {
+		display: inline-block;
+		width: getpx(12);
+		height: getpx(12);
+		background: url(../images/close.png) no-repeat center center;
+	}
+}
+.default-panel-title {
+	width: getpx(96);
+	justify-content: center;
+	padding: 0;
+}
+.open-content-panel-title {
+	width: getpx(390);
+	justify-content: space-between;
+	padding: 0 getpx(20);
+}
+.path-panel-content {
+	width: getpx(390);
+	height: getpx(584);
+	border: 1px solid $background-color;
+	display: flex;
+	flex-direction: column;
+}
+.content-filter {
+	box-sizing: border-box;
+	height: getpx(32);
+	margin: getpx(5) 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 getpx(20);
+	.filter-title {
+		font-size: getpx(14);
+		color: $text-dark-color;
+	}
+	.threhold {
+		font-size: getpx(14);
+		color: $text-color;
+		.select-list {
+			margin: 0 5px;
+		}
+		:global {
+			.ant-select-selection {
+				background-color: #f2f4f5;
+				border: none;
+			}
+			.ant-select-dropdown-menu {
+				background: #fff;
+			}
+		}
+	}
+}
+.list-container {
+	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	align-content: flex-start;
+	overflow: auto;
+	@include custom-scrollbar();
+
+	padding: getpx(16);
+}
+
+.structural-item {
+	margin-right: getpx(16);
+	margin-bottom: getpx(16);
+}
+
+.no-data-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.play-btn-container {
+	height: getpx(64);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	.play-btn {
+		width: getpx(120);
+		height: getpx(32);
+		line-height: getpx(32);
+		text-align: center;
+		color: #fff;
+		background-color: #0a7bff;
+		font-size: getpx(14);
+		cursor: pointer;
+	}
+}

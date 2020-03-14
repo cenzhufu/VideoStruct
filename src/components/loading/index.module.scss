@@ -1,0 +1,63 @@
+@import '~stassets/styles/index.scss';
+
+@mixin loaderDivMixin {
+	border-radius: 50%;
+	padding: 8px;
+	border: 2px solid transparent;
+	animation: rotate linear 2.5s infinite;
+}
+
+$blue: $component-foreground-color;
+
+.loading-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.loading-animation-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: $blue;
+}
+
+.loader {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	display: block;
+	overflow: hidden;
+
+	div {
+		height: 100%;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(180deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* loader 1 */
+.loader1,
+.loader1 div {
+	@include loaderDivMixin;
+
+	border-top-color: $blue;
+	border-bottom-color: $blue;
+}

@@ -1,0 +1,20 @@
+@import '~stassets/styles/index.scss';
+
+.attr-group {
+	display: flex;
+	// align-items: center;
+	// margin: getpx(16) 0;
+	margin-bottom: 20px;
+	:global {
+		.ant-checkbox-wrapper {
+			color: $text-color;
+		}
+		.ant-checkbox-group {
+			line-height: 2.5;
+		}
+		.ant-checkbox-group-item {
+			width: getpx(88);
+			margin-right: 0;
+		}
+	}
+}

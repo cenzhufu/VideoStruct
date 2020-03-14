@@ -1,0 +1,14 @@
+@import '~stassets/styles/index.scss';
+
+.detected-panel {
+	width: getvmin(280);
+	// height: getvmin(490 + 138);
+}
+.custom-message-container {
+	display: inline-block;
+}
+.custom-message-btn {
+	color: #0a7bff;
+	margin-left: getpx(15);
+	cursor: pointer;
+}

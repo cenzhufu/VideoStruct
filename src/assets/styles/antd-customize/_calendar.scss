@@ -1,0 +1,159 @@
+@import '~stassets/styles/index.scss';
+
+$calendar-prefix-cls: #{$antd-prefix}-calendar;
+$tag-prefix-cls: #{$antd-prefix}-tag;
+
+// 不采用默认的theme配置的颜色
+.#{$calendar-prefix-cls} {
+	background-color: #fff !important;
+	border: none !important;
+
+	.#{$calendar-prefix-cls}-footer-btn {
+		.#{$tag-prefix-cls}-blue {
+			background: #fff;
+			border-color: transparent;
+		}
+
+		.#{$calendar-prefix-cls}-ok-btn {
+			border-radius: 0;
+		}
+	}
+}
+
+// calendar
+.#{$calendar-prefix-cls}-range {
+	&.#{ant-calendar}-time {
+		.#{ant-calendar}-time-picker-select {
+			background-color: white;
+		}
+	}
+}
+
+.#{ant-calendar}-time-picker {
+	background-color: white !important;
+}
+
+.#{$calendar-prefix-cls}-in-range-cell::before {
+	background: $hover-color !important;
+}
+
+.#{$calendar-prefix-cls}-month-panel {
+	background: #fff !important;
+}
+
+.#{$calendar-prefix-cls}-year-panel {
+	background: #fff !important;
+}
+
+.#{$calendar-prefix-cls}-decade-panel {
+	background: #fff !important;
+}
+
+.#{$calendar-prefix-cls}-year-panel-year:hover {
+	background: $hover-color !important;
+}
+
+.#{$calendar-prefix-cls}-decade-panel-decade:hover {
+	background: $hover-color !important;
+}
+
+.#{$calendar-prefix-cls}-date:hover {
+	background: $hover-color !important;
+}
+
+.#{$calendar-prefix-cls}-month-panel-month:hover {
+	background: $hover-color !important;
+}
+
+// 参考antd component --> date-picker rangePicker.less
+// range picker
+// .#{$calendar-prefix-cls}-range {
+// 	border: 1px solid $dark-gray;
+
+// 	.#{$calendar-prefix-cls}-input-wrap {
+// 		border-bottom: 1px solid $dark-gray;
+// 	}
+// }
+
+// @mixin calendarPanelHeader($calendar-prefix-cls) {
+// 	.#{$calendar-prefix-cls}-prev-century-btn,
+// 	.#{$calendar-prefix-cls}-next-century-btn,
+// 	.#{$calendar-prefix-cls}-prev-decade-btn,
+// 	.#{$calendar-prefix-cls}-next-decade-btn,
+// 	.#{$calendar-prefix-cls}-prev-month-btn,
+// 	.#{$calendar-prefix-cls}-next-month-btn,
+// 	.#{$calendar-prefix-cls}-prev-year-btn,
+// 	.#{$calendar-prefix-cls}-next-year-btn {
+// 		// antd中使用的是text-color-secondary, 所以我们不得不使用important
+// 		color: #fff !important;
+// 	}
+// }
+
+// date picker calendar
+// .#{$calendar-prefix-cls} {
+// 	&-header {
+// 		@include calendarPanelHeader($calendar-prefix-cls);
+// 	}
+
+// 	&-column-header {
+// 		.#{$calendar-prefix-cls}-column-header-inner {
+// 			font-size: 16px;
+// 			font-weight: 500;
+// 			color: #fff;
+// 		}
+// 	}
+// }
+
+// date picker picker.less
+// .#{$calendar-prefix-cls}-picker {
+// 	&-input {
+// 		// width: 234px;
+// 		border-color: $component-foreground-color;
+// 	}
+
+// 	// &-icon {
+// 	// 	// width: 12px !important;
+// 	// 	// height: 12px !important;
+// 	// 	// color: $text-color !important;
+// 	// }
+// }
+
+//日期选中颜色
+// .ant-calendar-picker-icon {
+
+// }
+
+// .ant-calendar-picker-clear {
+// 	width: 16px !important;
+// 	height: 16px !important;
+// 	right: 8px !important;
+// }
+
+// .ant-calendar-in-range-cell::before {
+// 	// background: rgba(2, 120, 255, 0.3) !important;
+// }
+
+// .ant-calendar-last-month-cell .ant-calendar-date,
+// .ant-calendar-next-month-btn-day .ant-calendar-date {
+// 	// color: gray !important;
+// }
+
+// .ant-calendar-footer,
+// .ant-calendar-range .ant-calendar-body,
+// .ant-calendar-range .ant-calendar-month-panel-body,
+// .ant-calendar-range .ant-calendar-year-panel-body {
+// 	// border-top: 1px solid $dark-gray !important;
+// }
+
+// .ant-calendar-picker {
+// 	// line-height: 3 !important;
+
+// 	// .ant-input {
+// 	// 	border: 1px solid $component-foreground-color !important;
+// 	// }
+// }
+
+// .ant-calendar-range-picker-separator {
+// 	// color: $text-color !important;
+// 	// border-left: none !important;
+// }

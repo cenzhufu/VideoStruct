@@ -1,0 +1,523 @@
+@import '~stassets/styles/index.scss';
+
+$slider-prefix-cls: #{$antd-prefix}-slider;
+$tag-prefix-cls: #{$antd-prefix}-tag;
+$switch-prefix-cls: #{$antd-prefix}-switch;
+$input-prefix-cls: #{$antd-prefix}-input;
+$btn-prefix-cls: #{$antd-prefix}-btn;
+
+.attribute-filter-panel {
+	// padding-bottom: 24px;
+	// min-width: 1135px;
+	position: relative;
+	background-color: white;
+	// height: getpx(80);
+	padding: getpx(24);
+	box-shadow: inset 0 -1px 0 0 $shadow-color;
+	z-index: $low-layer-index;
+	display: flex;
+	flex-direction: column;
+
+	:global {
+		.#{$switch-prefix-cls} {
+			// background-color: none;
+			// &-checked {
+			// 	background-color: #1890ff;
+			// }
+			min-width: getpx(28);
+			height: getpx(16);
+			background-color: $shadow-color;
+
+			&::after {
+				background-color: white;
+				width: 12px;
+				height: 12px;
+			}
+
+			&-loading-icon {
+				background-color: white;
+				width: 12px;
+				height: 12px;
+			}
+		}
+
+		.#{$switch-prefix-cls}-checked {
+			background-color: $component-foreground-color;
+		}
+
+		.#{$slider-prefix-cls} {
+			&:hover .#{$slider-prefix-cls}-track {
+				background-color: #0a7bff;
+			}
+
+			&:hover .#{$slider-prefix-cls}-handle:not(.ant-tooltip-open) {
+				border-color: transparent;
+			}
+
+			&:hover .#{$slider-prefix-cls}-rail {
+				background-color: #c8d6e4;
+			}
+
+			&-handle {
+				background: $component-foreground-color;
+				border: 2px solid $component-foreground-color;
+				margin-top: -6px;
+
+				// .ant-slider-handler:focus
+				&:focus {
+					border-color: $component-foreground-color;
+					box-shadow: 0 0 0 1px $component-foreground-color;
+					outline: none;
+				}
+			}
+
+			&-rail {
+				background-color: $shadow-color;
+				height: getpx(2);
+			}
+
+			&-track {
+				height: getpx(2);
+			}
+
+			&-step {
+				height: getpx(2);
+			}
+		}
+
+		::-webkit-input-placeholder {
+			font-size: 14px;
+			color: $text-second-color;
+			letter-spacing: 0;
+		}
+
+		.#{$input-prefix-cls} {
+			border: none;
+			background-color: #f2f4f5;
+			border-radius: 0;
+		}
+
+		.#{$input-prefix-cls}:focus {
+			box-shadow: none;
+		}
+
+		.#{$tag-prefix-cls} {
+			height: getpx(28);
+			line-height: getpx(28);
+			background: $background-color;
+			border: none;
+			border-radius: 0;
+			font-size: 14px;
+			color: $text-color;
+			// 源码: border: @border-width-base @border-style-base @border-color-base;
+			// border: 1px solid #51659c;
+		}
+
+		.#{$btn-prefix-cls} {
+			border-radius: 0;
+			background-color: #0a7bff;
+
+			&:hover {
+				color: #fff;
+				border-color: transparent;
+			}
+
+			&:focus {
+				color: #fff;
+				border-color: transparent;
+			}
+		}
+	}
+
+	.popover-selector-mask-layer {
+		background-color: rgba(66, 79, 102, 0.5);
+		position: fixed;
+		left: 0;
+		top: getpx(180);
+		z-index: 10;
+	}
+
+	.below-mask {
+		z-index: 8;
+		width: getpx(240) !important; // 不加不行啊
+	}
+
+	.upon-mask {
+		width: getpx(96);
+		height: getpx(32);
+		z-index: 20;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: getpx(16);
+		background-color: #f2f4f5;
+		// &:hover {
+		// 	color: #1890ff;
+		// }
+	}
+
+	.opon-mask-active {
+		background: #0a7bff;
+		color: #fff;
+	}
+}
+
+.collapsed {
+	height: getpx(38);
+}
+
+.search-filter-title {
+	display: inline-block;
+	min-width: 70px;
+	color: $text-second-color;
+}
+
+.search-result-accuracy {
+	display: inline-block;
+	width: getvw(60);
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	cursor: pointer;
+	color: rgba(102, 102, 102, 1);
+	border: 1px solid rgba(102, 102, 102, 1);
+}
+
+.search-result-middle-accuracy {
+	display: inline-block;
+	width: getvw(60);
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	cursor: pointer;
+	color: rgba(102, 102, 102, 1);
+	border: 1px solid rgba(102, 102, 102, 1);
+}
+
+.search-result-threshold {
+	display: flex;
+	align-items: center;
+	// position: relative;
+	margin-left: getvw(48);
+	// height: 44px;
+	animation: slowShow 0.2s;
+	//  Firefox
+	-moz-animation: slowShow 0.2s;
+	//  Safari 和 Chrome
+	-webkit-animation: slowShow 0.2s;
+	// Opera
+	-o-animation: slowShow 0.2s;
+
+	.search-result-slider-input {
+		display: flex;
+		width: 50px;
+	}
+}
+
+.search-filter-attribute {
+	width: getvw(160);
+	margin-right: 8px;
+}
+
+.search-filter-btn-group {
+	position: absolute;
+	right: getvmin(24);
+}
+
+.btn {
+	display: inline-block;
+	width: getvw(80);
+	height: 28px;
+	margin: 0 0 0 16px;
+	line-height: 28px;
+	text-align: center;
+	border-radius: $card-radius;
+	color: $component-foreground-color;
+	border: 1px solid $component-foreground-color;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background: $component-foreground-color;
+	color: $text-color;
+}
+
+.search-selected-container {
+	display: flex;
+	align-items: center;
+	padding-top: 24px;
+}
+
+.search-selected-container > span {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	// padding: 24px 24px 0 24px;
+}
+
+.search-filter-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding: 0 24px 0 24px;
+}
+
+.border-bottom {
+	position: absolute;
+	left: 0;
+	top: 36px;
+	width: 100%;
+	height: 0;
+	border-bottom: 1px solid $component-foreground-color;
+	animation: slowShow 0.2s;
+	//  Firefox
+	-moz-animation: slowShow 0.2s;
+	//  Safari 和 Chrome
+	-webkit-animation: slowShow 0.2s;
+	// Opera
+	-o-animation: slowShow 0.2s;
+}
+
+@keyframes slowShow {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@-moz-keyframes slowShow {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes slowShow {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@-o-keyframes slowShow {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+.search-attribute-container {
+	width: getvw(160);
+	min-width: 72px;
+	height: 32px;
+	line-height: 32px;
+	padding-left: 12px;
+	margin-right: 16px;
+	border: 1px solid rgb(2, 120, 255);
+	z-index: 100;
+	border-radius: $card-radius;
+	// &:nth-child(3) {
+	// 	margin-right: getvmin(64);
+	// }
+}
+
+.clear-all-attribute {
+	position: relative;
+	display: flex;
+	align-items: center;
+	left: getvmin(64);
+	cursor: pointer;
+	font-size: 14px;
+	color: $text-dark-color;
+	letter-spacing: 0;
+}
+
+.collapse-bg {
+	color: rgb(2, 120, 255);
+	border-bottom: none;
+	background: url(../imgs/expand_icon.png) no-repeat getvw(130) 14px;
+	background-color: rgba(38, 46, 63, 1);
+}
+
+.expand-bg {
+	background: url(../imgs/collapse_icon.png) no-repeat getvw(130) 14px;
+}
+
+.attribute-item {
+	position: absolute;
+	// top: 60px;
+	top: 37px;
+	left: 0;
+	width: 100%;
+	padding: 16px;
+	z-index: 1000;
+	background: rgba(38, 46, 63, 1);
+	box-shadow: 0 6px 20px 0 rgba(3, 10, 26, 0.83);
+	border: 1px solid $component-foreground-color;
+	border-top: none;
+}
+
+.dropdownitem {
+	position: absolute;
+	// top: 60px;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	padding-top: 16px;
+	// z-index: 1000;
+	background: rgba(38, 46, 63, 1);
+	box-shadow: 0 6px 20px 0 rgba(3, 10, 26, 0.83);
+	border: 1px solid $component-foreground-color;
+	border-top: none;
+}
+
+.search-filter-setting-container {
+	display: flex;
+	height: 32px;
+	padding-left: 24px;
+	margin-top: 24px;
+	color: $text-second-color;
+}
+
+.enter {
+	opacity: 0;
+	transform: scale(0);
+}
+
+.enter-active {
+	opacity: 1;
+	transform: scale(1);
+	transition: all 200ms ease-in;
+}
+
+.leave {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.leave-active {
+	opacity: 0;
+	transform: scale(0);
+	transition: all 300ms ease-in;
+}
+
+.appear {
+	transform: scale(0);
+	opacity: 0;
+}
+
+.appear-active {
+	transform: scale(0);
+	opacity: 0;
+	transition: all 300ms ease-in;
+}
+
+.show {
+	opacity: 0;
+}
+
+.show-active {
+	opacity: 1;
+	transition: all 300ms ease-in;
+}
+
+.hide {
+	opacity: 1;
+}
+
+.hide-active {
+	opacity: 0;
+	transition: all 300ms ease-in;
+}
+
+// 二期添加
+.content-card {
+	box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.15);
+	background-color: white;
+	position: fixed;
+	z-index: $mid-layer-index + 1;
+	// padding: getpx(24);
+	// width: getpx(620);
+	transform: translateX(-50%);
+}
+
+.search-car-license-input {
+	width: getpx(220);
+	margin-left: getpx(16);
+	display: flex;
+}
+
+.attribute-select-content {
+	display: flex;
+	align-items: center;
+	height: getpx(30);
+}
+
+.attribute-select-content-spaciel {
+	justify-content: space-between;
+}
+
+.attribute-select-content-filter {
+	display: flex;
+	align-items: center;
+	height: getpx(30);
+}
+
+.center-flex-container {
+	display: flex;
+	align-items: center;
+}
+
+.center-threshold-wraper {
+	// width: 200px;
+	display: flex;
+	align-items: center;
+}
+
+.threshold-slider {
+	width: 108px;
+	margin: 0 20px 0 20px;
+}
+
+.threshold-slider-input {
+	width: 56px;
+	height: 32px;
+	background: #f2f4f5;
+	color: $text-second-color;
+	letter-spacing: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: getpx(15);
+}
+
+.search-action-wraper {
+	// display: flex;
+	// position: absolute;
+	// right: getpx(24);
+	position: relative;
+	width: getpx(125);
+}
+
+.input-license-number {
+	color: $text-second-color;
+}
+
+.carSearchBtn {
+	font-size: 14px;
+	color: #fff;
+	letter-spacing: 0;
+}

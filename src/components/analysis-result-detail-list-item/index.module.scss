@@ -1,0 +1,49 @@
+@import '~stassets/styles/index.scss';
+
+.source-detail-item {
+	display: flex;
+	padding: 0 32px;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.check-box {
+	flex: 0 0 auto;
+}
+
+.icon {
+	flex: 0 0 auto;
+}
+
+.info--container {
+	width: 50%;
+}
+
+.souce-name {
+	@include text-trunk;
+}
+
+.status {
+	display: flex;
+	white-space: nowrap;
+}
+
+.status-label {
+	color: $text-second-color;
+}
+
+.status-tip {
+	@include text-trunk;
+}
+
+.finished-status {
+	color: #5cdc1d;
+}
+
+.processing-status {
+	color: $component-foreground-color;
+}
+
+.real-time-status {
+	color: #00eaff;
+}

@@ -1,0 +1,23 @@
+@import '~stassets/styles/index.scss';
+$colorWhite: #fff;
+$bgColor: rgba(28, 34, 46, 0.3);
+
+.task-time-segment {
+	width: 100%;
+	height: getpx(18);
+	background: $bgColor;
+	// opacity: 0.3;
+	color: $colorWhite;
+	font-size: getpx(10);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	.task-time-icon {
+		display: inline-block;
+		width: getpx(10);
+		height: getpx(10);
+		background: url('../images/Shape.png') no-repeat center center;
+		margin-right: getpx(10);
+	}
+}

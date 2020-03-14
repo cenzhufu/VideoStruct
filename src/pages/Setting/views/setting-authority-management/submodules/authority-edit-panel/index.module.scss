@@ -1,0 +1,56 @@
+@import '~stassets/styles/index.scss';
+
+.module-group {
+	display: flex;
+}
+
+.module-group--tip {
+	flex: 0 0 72px;
+	font-size: 14px;
+	color: $text-second-color;
+	margin-right: 27px;
+}
+
+.input-name {
+	flex: 1 1 auto;
+	position: relative;
+}
+
+.module-item-list {
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 28px;
+}
+
+.module-item {
+	margin: 0 !important;
+
+	&:not(:last-child) {
+		margin-right: 16px !important;
+	}
+}
+
+.varify-tip {
+	position: absolute;
+}
+
+.authority-module-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 26px;
+
+	.authority-module-checkbox {
+		display: inline-block;
+		max-width: 80px;
+		text-align: center;
+		text-emphasis: emphasis;
+	}
+}
+
+.authority-module-btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}

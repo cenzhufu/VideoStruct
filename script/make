@@ -1,0 +1,7 @@
+#!/bin/bash
+
+curDir=`pwd`
+cd ../
+rootDir=`pwd`
+
+npm install --unsafe-perm && npm run build

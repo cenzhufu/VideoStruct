@@ -1,0 +1,155 @@
+@import '~stassets/styles/index.scss';
+
+$card-prefix-cls: #{$antd-prefix}-card;
+
+.user-center-wrap {
+	flex: auto;
+	height: 100%;
+	display: flex;
+
+	:global {
+		.ant-layout-sider-children {
+			display: flex;
+			flex-direction: column;
+		}
+
+		// 参考antd  component --> card index
+		.#{$card-prefix-cls} {
+			&-body {
+				padding: 0;
+			}
+		}
+
+		.ant-cascader-picker-clear,
+		.ant-cascader-menus ul,
+		.ant-cascader-menus ol {
+			background: #f2f4f5;
+		}
+
+		.ant-table-thead > tr > th {
+			background: #c8d6e4;
+		}
+
+		.ant-table-placeholder {
+			background: $background-color;
+		}
+
+		.ant-table-tbody > tr > td {
+			border: none;
+		}
+
+		// .ant-table-fixed-header >.ant-table-content>.ant-table-scroll>.ant-table-body {
+		// 	background: none;
+		// }
+		// .ant-cascader-picker {
+		// 	background: #f2f4f5;
+		// }
+	}
+}
+
+//用户中心修改头像弹框
+.change-avatar-modal {
+	:global {
+		.ant-modal-header {
+			border-bottom: 1px solid $dark-gray !important;
+
+			.ant-modal-title {
+				color: $text-second-color !important;
+			}
+		}
+
+		.ant-modal-body {
+			display: flex;
+			justify-content: center;
+			padding: 37px;
+		}
+
+		.ant-modal-footer {
+			display: flex;
+			justify-content: center;
+			padding: 17px 0;
+			border-top: 1px solid $dark-gray !important;
+		}
+	}
+}
+
+.user-content {
+	position: relative;
+	// background: $component-background-color;
+	background: $background-color;
+	overflow-y: hidden;
+	height: 100%;
+
+	.upload-record-wrap {
+		//操作记录模块样式
+		.content-title {
+			margin: 12px 0 11px 16px;
+			height: 25px;
+			font-size: 18px;
+			font-weight: 500;
+			color: $text-color;
+			line-height: 25px;
+		}
+
+		.contetnt-table {
+			// height: 100%;
+		}
+	}
+}
+
+.right-content {
+	padding: 0 0 0 getvw(32);
+}
+
+.feature-container {
+	background: $component-background-color;
+	height: 100%;
+
+	.user-operate {
+		height: getvh(64);
+		line-height: getvh(64);
+		text-align: center;
+		color: $text-second-color;
+		border-bottom: 1px solid $dark-gray;
+		border-radius: $card-radius $card-radius 0 0;
+
+		.active {
+			color: $component-foreground-color;
+		}
+
+		span {
+			cursor: pointer;
+		}
+	}
+}
+
+.user-card {
+	height: getvh(307);
+	min-height: getratiopx(307);
+	flex: 0 0 auto;
+	background: $component-background-color;
+
+	.avator {
+		margin: getvh(31) 0 getvh(9) 0;
+		text-align: center;
+	}
+
+	.name {
+		height: getvh(33);
+		margin-bottom: getvh(24);
+		font-size: getvh(24);
+		line-height: getvh(33);
+		font-weight: 600px;
+		text-align: center;
+		color: $text-color;
+	}
+
+	.text {
+		height: getvh(22);
+		margin-bottom: getvh(16);
+		font-size: getvh(16);
+		line-height: getvh(22);
+		text-align: center;
+		color: $text-second-color;
+	}
+}

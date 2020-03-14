@@ -1,0 +1,67 @@
+.structural-item {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	// transition: all 0.2s ease;
+}
+
+.structrual-item-content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+// .cut {
+// overflow: hidden;
+// }
+
+.clickable {
+	cursor: pointer;
+}
+
+.image-mask-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+.delete-icon-container {
+	position: absolute;
+	top: calc(100% / 10 * -1);
+	right: calc(100% / 10 * -1);
+	// width: calc(100% / 5);
+	// height: calc(100% / 5);
+}
+
+.delete-icon {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		// TODO: svg的尺寸也自适应
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.selected-icon-container {
+	position: absolute;
+	top: 60%;
+	left: 60%;
+	width: calc(100% / 5);
+	height: calc(100% / 5);
+
+	.selected-icon {
+		svg {
+			width: 32px;
+			height: 32px;
+		}
+	}
+}

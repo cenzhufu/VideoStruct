@@ -1,0 +1,45 @@
+@import '~stassets/styles/index.scss';
+
+.link-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.face-body-container {
+	display: flex;
+	margin-bottom: getpx(8);
+}
+
+.face-body-container-box {
+	display: flex;
+	padding: getpx(12);
+	background-color: #fff;
+	flex-direction: column;
+	position: relative;
+}
+
+.face-body-container-box:hover {
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.link-symbol {
+	display: flex;
+	align-items: center;
+	margin-left: getvmin(1);
+	margin-right: getvmin(1);
+}
+
+.face-Placeholder {
+	width: getpx(100);
+	height: getpx(100);
+}
+
+.body-Placeholder {
+	width: getpx(50);
+	height: getpx(100);
+}
+
+.face-body-tip {
+	position: relative;
+}

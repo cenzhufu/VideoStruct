@@ -1,0 +1,27 @@
+@import '~stassets/styles/index.scss';
+
+.structual-list {
+	display: flex;
+	margin-left: getpx(2);
+}
+
+.structual-list-item {
+	// margin-right: 10px;
+}
+
+.structual-list-item--content {
+	// 80 / 1080 (默认值)
+	height: calc(7.4vmin);
+	width: calc((7.4vmin));
+	border: $component-foreground-color 1px solid;
+	border-radius: $card-radius;
+}
+
+.placeholder {
+	// 80 / 1080 (默认值)
+	height: calc(7.4vmin);
+	width: calc((7.4vmin));
+	// border: $component-foreground-color 1px dashed;
+	border-radius: $card-radius;
+	margin-right: 10px;
+}

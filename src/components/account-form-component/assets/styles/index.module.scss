@@ -1,0 +1,52 @@
+@import '~stassets/styles/index.scss';
+
+.account-management-all,
+.account-add-form,
+.account-edit-form {
+	width: getvw(800);
+	height: getvh(600);
+
+	:global {
+		.ant-modal {
+			width: getvw(800);
+			height: getvh(600);
+		}
+
+		.ant-modal-header {
+			border-bottom: 0;
+			background: $component-background-color;
+			box-shadow: 0 -1px 0 0 $dark-gray;
+			border-radius: $card-radius $card-radius 0 0;
+			width: getvw(800);
+			.ant-modal-title {
+				color: $text-second-color;
+			}
+		}
+
+		.ant-modal-body {
+			background: $background-color;
+			width: getvw(800);
+			text-align: left;
+		}
+
+		.ant-modal-footer {
+			background: $background-color;
+			border-top: 0;
+			width: getvw(800);
+		}
+
+		form .ant-cascader-picker,
+		.ant-select-selection {
+			background: #f2f4f5;
+		}
+	}
+}
+
+.account-data-add-cancel {
+	margin-left: getvw(500);
+	margin-right: getvh(10);
+}
+
+.avatar-contaniner {
+	cursor: pointer;
+}

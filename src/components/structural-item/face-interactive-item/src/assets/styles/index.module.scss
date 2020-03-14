@@ -1,0 +1,68 @@
+@import '~stassets/styles/index.scss';
+
+$colorBlue: #0a7bff;
+
+.structural-body-interactive {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	cursor: pointer;
+}
+.isSelected {
+	border: 1px solid $colorBlue;
+}
+.noSelected {
+	border: none;
+}
+.mask {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(28, 34, 46, 0.8);
+	color: $text-color;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.show-big-pic-btn {
+	width: getpx(56);
+	height: getpx(25);
+	border: 1px solid $text-color;
+	text-align: center;
+	line-height: getpx(25);
+	font-size: getpx(12);
+}
+.select-icon-container {
+	width: getpx(18);
+	height: getpx(18);
+	position: absolute;
+	top: getpx(5);
+	left: getpx(5);
+	z-index: 2;
+	border-radius: 50%;
+	.select-icon {
+		width: getpx(18);
+		height: getpx(18);
+		svg {
+			width: getpx(18);
+			height: getpx(18);
+		}
+	}
+}
+
+.isSelected-icon {
+	background: $colorBlue;
+}
+.noSelected-icon {
+	border: 1px solid $text-color;
+}
+.face-container {
+	width: getpx(100);
+	height: getpx(124);
+	margin: 0 getpx(6) getpx(10);
+}

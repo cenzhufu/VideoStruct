@@ -1,0 +1,49 @@
+{
+	"defaultLanguage": "zh-CN",
+	"apiRequestAddress": {
+		"ip": "request-ip",
+		"port": "request-port"
+	},
+	"uriPrefixV3": {
+		"ip": "resource-ip",
+		"port": "resource-port"
+	},
+	"mqttServer": {
+		"ip": 192.168.8.235,
+		"port": 9001
+	},
+	"mapServer": {
+		"mapType": "googleOnline",
+		"mapDefaultZoom": 9,
+		"mapCenter": {
+			"lat": 22.648365,
+			"lng": 114.102316
+		},
+		"mapZoom": {
+			"minZoom": 6,
+			"maxZoom": 18
+		},
+		"serverUrl": {
+			"baiduOffline": {
+				"origin": "http://127.0.0.1/ifaas/mapapi/tiles/{z}/{x}/{y}.png"
+			},
+			"baiduOnline": {
+				"origin": "http://online{s}.map.bdimg.com/tile/?qt=tile&x={x}&y={y}&z={z}&styles=pl&udt=20150518"
+			},
+			"googleOnline": {
+				"origin": "http://mt0.google.cn/vt/lyrs=m@160000000&hl=zh-CN&gl=CN&src=app&y={y}&x={x}&z={z}&s=Ga",
+				"transforCoordinate": {
+					"lat": -0.00604391488360179,
+					"lng": -0.00649039475300128
+				}
+			},
+			"googleOffline": {
+				"origin": "http://127.0.0.1/ifaas/mapapi/tiles/{z}/{x}/{y}.png",
+				"transforCoordinate": {
+					"lat": -0.00604391488360179,
+					"lng": -0.00649039475300128
+				}
+			}
+		}
+	}
+}

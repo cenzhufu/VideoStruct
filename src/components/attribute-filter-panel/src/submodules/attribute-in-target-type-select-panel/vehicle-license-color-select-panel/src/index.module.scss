@@ -1,0 +1,92 @@
+@import '~stassets/styles/index.scss';
+
+$checkbox-prefix-cls: #{$antd-prefix}-checkbox;
+$checkbox-inner-prefix-cls: #{$checkbox-prefix-cls}-inner;
+$btn-prefix-cls: #{$antd-prefix}-btn;
+$bottom-height: 56;
+
+@mixin scrollbar-no-style() {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.structural-attribute-panel {
+	position: relative;
+	width: getpx(320);
+	height: getpx(350);
+	// overflow-y: auto;
+	// padding-bottom: getpx($bottom-height);
+
+	.list-container {
+		// flex: 1 1 auto;
+		height: calc(100% - #{getpx($bottom-height)});
+		overflow-y: auto;
+		@include scrollbar-no-style();
+	}
+
+	.item {
+		text-indent: getpx(30);
+
+		&:hover {
+			background: #ebf3f9;
+		}
+	}
+
+	.button-container {
+		// margin-top: auto;
+		// height: getpx(56);
+		// flex: 0 0 auto;
+		position: absolute;
+		bottom: 0;
+		height: getpx($bottom-height);
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 getpx(20);
+
+		.button-cancel {
+			border: none;
+			background-color: unset;
+			color: #424f66;
+			// &:hover {
+			// 	color: $component-foreground-color;
+			// }
+		}
+
+		.button-reset {
+			background-color: transparent;
+			color: #424f66;
+		}
+
+		.button-cancel:hover,
+		.button-reset:hover {
+			color: #424f66;
+			border-color: transparent;
+		}
+
+		.button-ok {
+			border: none;
+			width: getpx(70);
+			height: getpx(30);
+			color: #fff;
+			text-align: center;
+			background: #0a7bff;
+		}
+	}
+
+	:global {
+		.#{$checkbox-inner-prefix-cls} {
+			border-radius: 50%;
+		}
+
+		.#{$btn-prefix-cls} {
+			border-color: transparent;
+		}
+	}
+}

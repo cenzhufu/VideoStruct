@@ -1,0 +1,28 @@
+.video-player-container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.video-player {
+	background-color: #021226;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	:global {
+		.vjs-big-play-button {
+			left: 50%;
+			top: 50%;
+			margin-left: -1.5em;
+			margin-top: -0.75em;
+		}
+
+		// .video-id-dimensions {
+		// 	width: unset;
+		// 	height: unset;
+		// }
+	}
+}

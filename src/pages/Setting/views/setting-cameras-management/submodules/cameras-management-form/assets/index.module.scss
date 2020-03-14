@@ -1,0 +1,41 @@
+@import '~stassets/styles/index.scss';
+
+.add-camera-container {
+	max-height: getvh(560);
+	display: flex;
+	flex-direction: column;
+}
+
+.form {
+	overflow-y: auto;
+	flex: 1 1 auto;
+
+	:global {
+		.ant-input {
+			background-color: #f2f4f5;
+		}
+	}
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.cascader-container {
+	position: relative;
+}
+
+.cascader-container-input {
+	width: 100%;
+	text-indent: 10px;
+	border-radius: $card-radius;
+	// background-color: $dark-gray;
+	background: #f2f4f5;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.camera-add-cancel {
+	margin: 40px 10px 0 300px;
+}

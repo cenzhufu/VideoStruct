@@ -1,0 +1,8 @@
+@import '~stassets/styles/index.scss';
+$layout-prefix-cls: #{$antd-prefix}-layout;
+
+.#{$layout-prefix-cls} {
+	&-sider {
+		z-index: $low-layer-index;
+	}
+}

@@ -1,0 +1,61 @@
+@import '~stassets/styles/index.scss';
+
+.tree-structure {
+	height: 100%;
+	display: flex;
+
+	:global {
+		.ant-input {
+			background: #f3f4f5;
+		}
+
+		.ant-tree {
+			width: getpx(400);
+		}
+
+		.ant-tree.ant-tree-show-line li span.ant-tree-switcher {
+			background: white;
+			height: getpx(36);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.ant-tree li .ant-tree-node-content-wrapper {
+			height: getpx(36);
+			margin-left: getpx(-28);
+			width: 100%;
+		}
+
+		.ant-tree li .ant-tree-node-content-wrapper:hover {
+			background-color: #ebf3f9;
+		}
+	}
+}
+
+.units-area-show {
+	// margin-bottom: getvh(120);
+}
+
+.area-tool-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: getvh(24) 0 getvh(24) getvw(10);
+}
+
+.area-search {
+	width: getvw(520);
+	// margin-left: auto;
+	// right: getvw(12);
+	background: #f3f4f5;
+
+	span {
+		left: getvw(12);
+	}
+}
+
+.title {
+	height: getpx(36);
+	line-height: getpx(36);
+}

@@ -1,0 +1,58 @@
+@import '~stassets/styles/index.scss';
+$input-prefix-cls: #{$antd-prefix}-input;
+
+.file-list-source-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	// padding-top: 12px;
+}
+
+.file-list-search-input-container {
+	// padding: 0 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// padding-bottom: 12px;
+
+	// :global {
+	// 	.ant-input {
+	// 		background: #263247;
+	// 		border: none;
+
+	// 	}
+
+	// }
+}
+
+.file-list-search-input {
+	// width: 100%;
+	width: getpx(240);
+	padding: 12px 0;
+	margin: 0 auto;
+
+	:global {
+		.#{$input-prefix-cls} {
+			// border: none;
+			// background-color: $text-dark-color;
+			background: #263247;
+			border: none;
+			border-radius: 0;
+			font-size: getpx(14);
+			color: $text-second-color;
+			letter-spacing: 0;
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+
+		::-webkit-input-placeholder {
+			font-size: 14px;
+			color: $text-second-color;
+			letter-spacing: 0;
+			font-weight: 0;
+		}
+	}
+}

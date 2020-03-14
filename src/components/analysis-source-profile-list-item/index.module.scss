@@ -1,0 +1,227 @@
+@import '~stassets/styles/index.scss';
+
+$tab-prefix-cls: #{$antd-prefix}-tabs;
+
+.header {
+	height: 56px;
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: space-between;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: -16px;
+		right: -16px;
+		height: 1px;
+		bottom: 0;
+		background-color: #3e454f;
+	}
+}
+
+.content {
+	// height: 100%;
+	display: flex;
+	flex: 1 1 auto;
+	padding: 16px 0;
+}
+
+.tip-info-panel {
+	display: flex;
+}
+
+.tip-info-panel--item {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	&:not(:last-child) {
+		margin-right: 32px;
+	}
+}
+
+.status {
+	width: 102px;
+	@include text-trunk();
+}
+
+.size {
+	width: 55px;
+	@include text-trunk();
+}
+
+.uploader {
+	width: 60px;
+	@include text-trunk();
+}
+
+.orgination {
+	width: 70px;
+	@include text-trunk();
+}
+
+.date {
+	width: 70px;
+	@include text-trunk();
+}
+
+.tip-info-panel--item--tip {
+	color: $text-second-color;
+	margin-right: 6px;
+	flex: 0 0 auto;
+}
+
+.tip-info-panel--item--icon {
+	margin-right: 12px;
+}
+
+.top-info-panel--item--value__important {
+	color: white;
+	font-weight: 600;
+	margin-right: 32px;
+	width: 192px;
+	@include text-trunk();
+}
+
+.tip-info-panel--item--value {
+	color: $text-second-color;
+}
+
+.type-filter-panel {
+	display: flex;
+	align-items: center;
+}
+
+.temp {
+	border: 1px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.status__finished {
+	color: #58cf21;
+}
+
+.status__real-time {
+	color: #00eaff;
+}
+
+.status__processing {
+	color: #0b69d5;
+}
+
+.result-list {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-left: 16px;
+	margin-right: 16px;
+	flex: 1 1 auto;
+	overflow: hidden;
+}
+
+.structural-item {
+	border-radius: $card-radius;
+	height: getpercent(100, 136);
+	margin-right: 16px;
+	// TODO: 这个写死，之后怎么适配
+	flex: 0 0 auto;
+	background-color: #1a2236;
+
+	&.face {
+		// width: getpercent(100, 136);
+		width: 100px;
+	}
+
+	&.body {
+		// width: getpercent(40, 136);
+		width: 100px;
+	}
+}
+
+.more-icon-indicator {
+	flex: 0 0 17px;
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+}
+
+.target-type {
+	position: relative;
+	width: 100px;
+	text-align: center;
+	@include text-trunk();
+}
+
+.target-type-disable {
+	position: relative;
+	width: 100px;
+	text-align: center;
+	@include text-trunk();
+}
+
+.target-tab-pane {
+	//
+}
+
+.analysis-source-profile-item {
+	height: 224px;
+	background-color: $second-background-color;
+	display: flex;
+	flex-direction: column;
+	padding: 0 16px;
+
+	:global {
+		.#{$antd-prefix} {
+			&-tabpane {
+				background: red;
+			}
+		}
+		.#{$tab-prefix-cls} {
+			&-ink-bar {
+				background-color: unset;
+			}
+
+			&-nav {
+				.#{$tab-prefix-cls}-tab {
+					display: inline-flex;
+					align-items: center;
+					border-bottom: unset;
+					height: 56px;
+					margin: 0;
+					position: relative;
+				}
+			}
+
+			&-tab {
+				&:not(:last-child)::after {
+					position: absolute;
+					content: '';
+					right: 0;
+					top: calc(50% - 8px);
+					background-color: $text-second-color;
+					height: 16px;
+					width: 1px;
+				}
+			}
+		}
+	}
+
+	.content-meta-info {
+		width: 241px;
+		flex: 0 0 auto;
+		background-color: #171b25;
+
+		:global {
+			.vjs-big-play-button {
+				left: 50%;
+				top: 50%;
+				margin-left: -1.5em;
+				margin-top: -0.75em;
+			}
+		}
+	}
+}

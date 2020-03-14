@@ -1,0 +1,120 @@
+@import '~stassets/styles/index.scss';
+
+:global {
+	.ant-select-dropdown-menu-item {
+		background: #f2f4f5;
+	}
+
+	.ant-cascader-menu-item-active,
+	.ant-select-dropdown-menu-item-selected {
+		background: #c8d6e4 !important;
+	}
+
+	.ant-cascader-menus ul,
+	.ant-cascader-menus ol {
+		background: #f2f4f5;
+	}
+
+	.ant-cascader-picker-clear {
+		background: none;
+	}
+}
+
+.record-search-management-all {
+	height: 100%;
+	// background: $component-background-color;
+	// background: #e5e8ec;
+	border-radius: $card-radius;
+	margin-left: getvw(24);
+	display: flex;
+	flex-direction: column;
+
+	:global {
+		.ant-select-selection {
+			background: none;
+		}
+	}
+}
+
+.record-search-management-title {
+	width: getvw(72);
+	height: getvh(25);
+	font-size: 18px;
+	font-weight: 500;
+	margin: getvw(12) 0 0 getvw(16);
+}
+
+.record-search-management-block {
+	height: 48px;
+	line-height: 48px;
+	margin-bottom: 24px;
+	color: $text-color;
+	border-bottom: 1px solid $dark-gray;
+	flex: 0 0 auto;
+}
+
+.record-search-filter {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex: 0 0 auto;
+}
+
+.record-choose-menus {
+	margin-left: getvw(24);
+}
+
+.record-choose-title {
+	font-size: 14px;
+	font-weight: 500;
+	margin: 0 getvw(12) 0 getvw(16);
+}
+
+.record-search-area {
+	width: getvw(500);
+	background: $dark-gray;
+	border-radius: $card-radius;
+	margin-left: auto;
+	right: getvw(15);
+}
+
+.record-table-block {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.record-table-content {
+	height: 100%;
+	overflow-y: scroll;
+	margin: getvh(24) 0 getvh(40) getvw(16);
+
+	table {
+		button {
+			margin-left: getvw(8);
+		}
+	}
+}
+
+.record-table-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.record-search-image-content {
+	background: $text-second-color;
+}
+
+.record-image-block {
+	height: 100%;
+	width: auto;
+	padding: 20px;
+}
+
+.record-image {
+	// height: getvh(200);
+	// width: getvw(200);
+	width: 150px;
+}

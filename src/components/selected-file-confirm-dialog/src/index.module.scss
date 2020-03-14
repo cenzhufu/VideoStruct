@@ -1,0 +1,43 @@
+@import '~stassets/styles/index.scss';
+
+$dialog-prefix-cls: #{$antd-prefix}-modal;
+
+.selected-files-confirm-dialog {
+	:global {
+		.#{$dialog-prefix-cls} {
+			&-title {
+				font-size: 16px;
+				color: #222f3e;
+			}
+
+			&-content {
+				background-color: white;
+			}
+
+			&-header {
+				background-color: white;
+				border-color: transparent;
+			}
+
+			&-footer {
+				border-color: transparent;
+			}
+		}
+	}
+}
+
+.conttent {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.file-list {
+	margin-top: getpx(24);
+	height: getpx(400);
+	overflow-y: auto;
+}
+
+.file-item {
+	margin-bottom: getpx(16);
+}

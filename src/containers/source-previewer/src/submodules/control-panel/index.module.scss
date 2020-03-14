@@ -1,0 +1,106 @@
+@import '~stassets/styles/index.scss';
+
+.control-panel {
+	width: 100%;
+	position: relative;
+	display: flex;
+	// justify-content: flex-start;
+	align-items: center;
+}
+
+.item {
+	margin-right: 24px;
+	transition: 0.3s ease-out;
+
+	&:hover {
+		color: $component-foreground-color;
+		transform: scale(1.1, 1.1);
+	}
+
+	&.selected {
+		color: $component-foreground-color;
+	}
+
+	&.disabled {
+		color: gray;
+	}
+}
+
+.return-icon-container {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.return-icon {
+		width: 25px;
+		height: 25px;
+	}
+}
+
+// 二期，替换icon,更改样式
+.item-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	margin-right: 25px;
+}
+.crop-default {
+	background: url(./assets/images/cut.png) no-repeat center center;
+}
+.crop-active {
+	background: url(./assets/images/cut-active.png) no-repeat center center;
+}
+.pos-default {
+	background: url(./assets/images/show.png) no-repeat center center;
+}
+.pos-active {
+	background: url(./assets/images/show-active.png) no-repeat center center;
+}
+.play-default {
+	background: url(./assets/images/play.png) no-repeat center center;
+}
+.play-disabled {
+	background: url(./assets/images/play.png) no-repeat center center;
+	opacity: 0.5;
+}
+.saveStyle {
+	background-color: transparent;
+	color: #fff;
+	width: 70px;
+	float: right;
+	height: 22px;
+	&:hover {
+		color: #40a9ff;
+		border-color: #40a9ff;
+	}
+	&:focus {
+		border-color: #40a9ff;
+		color: #40a9ff;
+	}
+}
+
+.cancel-cropper-button {
+	width: 64px;
+	height: 24px;
+	font-size: 12px;
+	// margin-right: 16px;
+	border: none;
+	color: #0a7bff;
+}
+
+.cropper-button {
+	height: 24px;
+	font-size: 12px;
+	border-radius: 0;
+}
+
+.crooper-buttons {
+	z-index: 100;
+	position: absolute;
+	// width: getpx(135);
+	height: 24px;
+	right: 0;
+}

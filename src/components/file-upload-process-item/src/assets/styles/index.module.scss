@@ -1,0 +1,100 @@
+@import '~stassets/styles/index.scss';
+$progress-prefix-cls: #{$antd-prefix}-progress;
+
+.file-source-item-container {
+	height: getpx(64);
+	padding-left: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	box-shadow: inset 0 1px 0 0 #c8d6e4;
+	padding-bottom: 8px;
+}
+
+.file-source-item-type {
+	width: getpx(40);
+	height: getpx(40);
+
+	// background: red;
+	:global {
+		.anticon svg {
+			width: 40px;
+			height: 40px;
+		}
+
+		.#{$progress-prefix-cls} {
+			&-bg {
+				width: 100%;
+				height: 4px;
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+.file-source-item-progress {
+	width: 100%;
+	padding-left: 8px;
+}
+
+.file-source-item-info {
+	display: flex;
+	align-items: center;
+	position: relative;
+	top: 4px;
+}
+
+.file-source-item-name {
+	display: inline-block;
+	width: 88%;
+	max-width: 224px;
+	position: relative;
+	top: 4px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 14px;
+	color: $text-color;
+	// display: flex;
+}
+
+.file-source-item-delete {
+	display: flex;
+	align-self: flex-end;
+	cursor: pointer;
+}
+
+.file-source-item-status {
+	// display: flex;
+	// justify-content: center;
+	position: relative;
+	bottom: 6px;
+	color: #0a7bff;
+}
+
+.file-source-item-size {
+	display: inline-block;
+	width: 36%;
+	font-size: 12px;
+	color: $text-second-color;
+	letter-spacing: 0;
+}
+
+.file-source-item-finished {
+	display: inline-block;
+	width: getpx(44);
+	padding: 0 4px;
+}
+
+.file-source-item-percent {
+	display: inline-block;
+	font-size: 12px;
+	width: 64%;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.upload-eror {
+	color: red;
+}

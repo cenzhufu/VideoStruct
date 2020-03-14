@@ -1,0 +1,52 @@
+@import '~stassets/styles/index.scss';
+
+.delete-modal-info {
+	:global {
+		.ant-modal-footer {
+			// border-top: 0;
+			border: 0;
+		}
+		.ant-modal-content {
+			// background: $component-background-color;
+			border-radius: $card-radius;
+			width: getvmin(512);
+			height: getvmin(268);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.action svg {
+			color: #bfbfbf;
+		}
+	}
+}
+.delete-title-info {
+	font-size: 22px;
+	font-weight: 400;
+	color: $text-second-color;
+	line-height: 23px;
+	margin-left: 9px;
+	vertical-align: middle;
+	text-overflow: hidden;
+}
+
+.delete-title-message {
+	margin-top: 27px;
+	display: block;
+	width: getvw(265);
+	height: getvh(22);
+	font-size: 16px;
+	font-weight: 500;
+	color: rgba(189, 189, 190, 1);
+	line-height: 22px;
+}
+
+.delete-title-message-text {
+	margin-left: 3px;
+}
+
+.info-icon {
+	width: 16px;
+	height: 16px;
+}

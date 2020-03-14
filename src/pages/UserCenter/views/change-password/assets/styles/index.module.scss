@@ -1,0 +1,106 @@
+@import '~stassets/styles/index.scss';
+
+.change-passeord-wrap {
+	display: flex;
+	flex-direction: column;
+	flex: auto;
+	height: 100%;
+
+	:global {
+		.ant-row-flex-middle {
+			align-items: baseline;
+		}
+
+		.ant-input:focus {
+			border: 1px solid $component-foreground-color;
+		}
+
+		.ant-input:hover {
+			border: 1px solid $component-foreground-color;
+		}
+	}
+
+	.title {
+		height: 48px;
+		color: $text-color;
+		border-bottom: 1px solid $dark-gray;
+	}
+
+	//修改密码模块样式
+	.password-container {
+		display: flex;
+		flex: auto;
+		align-content: center;
+		justify-content: center;
+		width: 100%;
+		animation: slowShow 0.5s;
+		// border: 1px solid red;
+	}
+
+	.content-title {
+		margin: 12px 0 11px 16px;
+		height: 25px;
+		font-size: 18px;
+		font-weight: 500;
+		color: $text-color;
+		line-height: 25px;
+	}
+}
+
+.password-item {
+	label {
+		height: 20px;
+		line-height: 20px;
+		font-size: 14px;
+		color: $text-color;
+	}
+
+	.password-item-input {
+		width: getvw(631);
+		height: 40px;
+		background: #f2f4f5;
+		// border: 1px solid rgba(78, 88, 118, 1);
+	}
+
+	.password-error {
+		position: relative;
+		top: 8px;
+		height: 24px;
+		color: rgba(254, 0, 78, 1);
+
+		span {
+			display: inline-block;
+			width: getvw(200);
+		}
+	}
+}
+
+.password-form {
+	display: flex;
+	flex: auto;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+
+	.password-row {
+		margin-bottom: 24px;
+	}
+
+	.sure-btn {
+		width: getvw(631);
+		height: 40px;
+		margin-top: 16px;
+	}
+}
+
+@keyframes slowShow {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

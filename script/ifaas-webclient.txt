@@ -1,0 +1,10 @@
+;规则注释              以“;”开头的行
+;0、src和dst均为相对路径，src的以源码目录为基准、dst以构建目录为基准
+;1、源文件拷贝到根目录                                 srcpath/file.txt           =>               d:.
+;2、源文件拷贝到dstpath目录                            srcpath/file.txt           =>               d:dstpath
+;3、源文件重命名为其他文件                              srcpath/file.txt           =>               f:dstpath/file2.txt
+;4、拷贝srcpath目录下所有的文件到dstpath目录下           srcpath/                   =>               d:dstpath
+;5、拷贝srcpath目录到dstpath目录下                      srcpath                    =>               d:dstpath
+;6、拷贝srcpath目录下某一类文件到dstpath目录下           srcpath/*.sh               =>               d:dstpath
+
+WebClient/             =>                d:.

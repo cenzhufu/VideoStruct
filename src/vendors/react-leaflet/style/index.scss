@@ -1,0 +1,263 @@
+.leaflet-map {
+	width: 100%;
+	height: 100%;
+}
+
+// popup层
+.leaflet-camera-wrap {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.leaflet-popup-camera {
+	// width: 310px;
+	width: 260px;
+	margin-bottom: 40px;
+}
+
+.leaflet-camera-wrap > h5 {
+	margin: 0;
+	font-weight: bold;
+	// text-align: center;
+	line-height: 48px;
+	height: 48px;
+	font-size: 16px;
+	color: #222f3e;
+	letter-spacing: 0;
+	border-bottom: 1px solid #e3e3e3;
+	text-indent: 20px;
+}
+
+.leaflet-popup-content {
+	margin: 0;
+	width: 100% !important; //覆盖行内样式
+}
+.leaflet-popup-content-wrapper {
+	border-radius: 3px;
+}
+.leaflet-popup-tip {
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.leaflet-camera-wrap > ul {
+	flex-grow: 1;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	overflow-y: auto;
+	max-height: 250px;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.leaflet-camera-wrap > ul > li {
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+	// height: 40px;
+	// line-height: 40px;
+	height: auto;
+	box-shadow: inset 0 -1px 0 0 #e5e9ec;
+	// text-indent: 20px;
+	cursor: pointer;
+	&:last-child {
+		box-shadow: none;
+	}
+}
+
+// .leaflet-camera-wrap > ul > li:hover {
+// 	color: #0a7bff;
+// 	background: #ebf3f9;
+// 	box-shadow: inset 0 -1px 0 0 #e5e9ec;
+// }
+
+.single-info {
+	// padding: 10px 20px;
+	.sgH5 {
+		text-align: left;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	span.view-video {
+		display: inline-block;
+		line-height: 28px;
+		border-radius: 3px;
+		text-align: center;
+		width: 106px;
+		border: 1px solid #0a7bff;
+		height: 28px;
+		font-size: 12px;
+		color: #0a7bff;
+		letter-spacing: 0;
+		cursor: pointer;
+	}
+}
+
+// marker的点
+.leaflet-marker-camera {
+	display: inline-block;
+	position: absolute;
+	width: 36px;
+	height: 45px;
+	top: -10px;
+	line-height: normal;
+	background-repeat: no-repeat;
+	background-position: top;
+
+	&.single {
+		background-image: url(./assets/camera.png);
+		&:hover {
+			background-image: url(./assets/camera_single_select.png);
+		}
+	}
+	&.multi {
+		background-image: url(./assets/camera_multi.png);
+		&:hover {
+			background-image: url(./assets/camera_multi_select.png);
+		}
+	}
+	&.single.icon-active {
+		background-image: url(./assets/camera_single_select.png);
+	}
+	&.multi.icon-active {
+		background-image: url(./assets/camera_multi_select.png);
+	}
+}
+
+// .leaflet-marker-wrap.selected_a > .leaflet-marker-camera {
+//   background-image: url(./assets/camera_single_select.png);
+//   transition: all 0.5s ease;
+//   /* background-image: url(../../asset/icon/camera_a.png); */
+// }
+// .leaflet-marker-wrap.selected_b > .leaflet-marker-camera {
+//   background-image: url(./assets/camera_multi_select.png);
+// }
+// .leaflet-marker-wrap.selected_ab > .leaflet-marker-camera {
+//   background-image: url(./assets/camera_multi_select.png);
+// }
+.leaflet-marker-wrap.selected_blue > .leaflet-marker-camera {
+	background-image: url(./assets/camera_blue.png);
+}
+.leaflet-marker-wrap.selected_green > .leaflet-marker-camera {
+	background-image: url(./assets/camera_green.png);
+}
+.leaflet-marker-wrap.selected_same > .leaflet-marker-camera {
+	background-image: url(./assets/camera_same.png);
+}
+.leaflet-marker-count {
+	background: #f0382b;
+	border-radius: 10px;
+	min-width: 24px;
+	padding: 0 2px;
+	height: 16px;
+	display: inline-block;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+	line-height: 16px;
+	position: absolute;
+	top: -18px;
+	left: 16px;
+	&.dn {
+		display: none;
+	}
+}
+
+.collapse-title:not(.title-open) {
+	height: 40px;
+	line-height: 40px;
+	text-indent: 20px;
+	color: #576574;
+	&:hover {
+		background: #ebf3f9;
+		box-shadow: inset 0 -1px 0 0 #e5e9ec;
+		color: #0a7bff;
+	}
+}
+.collapse-block {
+	transition: all 0.5s ease-in-out;
+}
+// 展开内容时标题区
+.title-open {
+	height: 40px;
+	line-height: 40px;
+	text-indent: 20px;
+	background: #0a7bff;
+	color: #fff;
+}
+// 展开内容时内容区
+.block-open {
+	// height: 132px;
+	background: #f2f4f5;
+	box-shadow: inset 0 -1px 0 0 #f2f4f5;
+}
+
+// 轨迹trace
+.leaflet-trace {
+	flex-direction: column-reverse;
+	align-items: center;
+}
+.leaflet-marker-title {
+	width: 96px;
+	padding: 5px;
+	word-break: keep-all;
+	color: rgb(0, 0, 0);
+	font-size: 12px;
+	text-align: center;
+	background: rgb(255, 255, 255);
+	border-radius: 10px;
+	border: 1px solid rgb(204, 204, 204);
+	box-sizing: border-box;
+}
+
+.leaflet-marker-bg1 {
+	display: inline-block;
+	text-align: center;
+	width: 54px;
+	height: 60px;
+	background-image: url(./assets/icon1.png);
+	img {
+		margin-top: 2px;
+		width: 48px;
+		height: 49px;
+		border-radius: 50%;
+	}
+}
+.camera-content-container {
+	width: 100%;
+	height: 132px;
+	box-sizing: border-box;
+	padding: 15px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+// 收起按钮
+.collapse-btn {
+	color: #0a7bff;
+	font-size: 14px;
+}
+.camera-item-info {
+	p {
+		margin: 0 0 10px 0;
+		font-size: 14px;
+		span.info-title-span {
+			color: #8395a7;
+		}
+		span.info-area {
+			color: #576574;
+		}
+		span.info-capture {
+			color: #0a7bff;
+		}
+	}
+}
+.span-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}

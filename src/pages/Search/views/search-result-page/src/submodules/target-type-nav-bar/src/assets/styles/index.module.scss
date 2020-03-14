@@ -1,0 +1,57 @@
+@import '~stassets/styles/index.scss';
+$btn-prefix-cls: #{$antd-prefix}-btn;
+
+.target-type-nav-bar {
+	position: relative;
+	height: getpx(40);
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	background-color: $component-background-color;
+
+	:global {
+		// 自定义antd 样式
+		.#{$btn-prefix-cls} {
+			border-radius: 0;
+			border: 1px solid #c8d6e4;
+			color: $shadow-color;
+			height: getpx(24);
+			padding: 0 7px;
+			font-size: getpx(12);
+		}
+	}
+}
+
+.target-type-item {
+	width: getpx(200);
+	text-align: center;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: $shadow-color;
+
+	&.active-item {
+		position: relative;
+		color: $text-color;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			background-color: white;
+			transform: scaleY(1.3) perspective(0.5em) rotateX(1deg);
+			transform-origin: bottom;
+		}
+	}
+}
+
+.mode-change-container {
+	margin-left: auto;
+	margin-right: getpx(20);
+}

@@ -1,0 +1,28 @@
+@import '~stassets/styles/index.scss';
+
+$tree-prefix-cls: #{$antd-prefix}-tree;
+$checkbox-inner-prefix-cls: #{$tree-prefix-cls}-inner;
+
+.ant-tree-checkbox-inner {
+	border-color: $component-foreground-color !important;
+	background: none !important;
+}
+
+.ant-tree-checkbox-checked {
+	background-color: $component-foreground-color;
+}
+
+.#{$tree-prefix-cls} {
+	&-checkbox {
+		&-inner {
+			// 源码为 border: @checkbox-border-width @border-style-base @border-color-base;
+			border-color: $component-foreground-color !important;
+			// 源码 background-color: @checkbox-check-color;
+			background-color: unset !important;
+		}
+	}
+
+	// &-checked {
+	// 	// background-color: $component-foreground-color;
+	// }
+}

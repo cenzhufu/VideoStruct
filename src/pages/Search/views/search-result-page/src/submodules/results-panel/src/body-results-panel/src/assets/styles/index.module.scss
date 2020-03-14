@@ -1,0 +1,15 @@
+@import '~stassets/styles/index.scss';
+
+.scroll {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	padding: getpx(24);
+}
+
+.result-list-item-body {
+	margin-right: getpx(16);
+	margin-bottom: getpx(16);
+}

@@ -1,0 +1,88 @@
+@import '~stassets/styles/index.scss';
+
+$checkbox-prefix-cls: #{$antd-prefix}-checkbox;
+$checkbox-inner-prefix-cls: #{$checkbox-prefix-cls}-inner;
+$btn-prefix-cls: #{$antd-prefix}-btn;
+$bottom-height: 56;
+
+.structural-attribute-panel {
+	position: relative;
+	width: getpx(620);
+	height: getpx(414);
+	box-sizing: border-box;
+	padding: getpx(24) getpx(34);
+	box-shadow: inset 0 -1px 0 0 #ebf3f9;
+
+	:global {
+		.#{$checkbox-inner-prefix-cls} {
+			border-radius: 50%;
+		}
+
+		.#{$btn-prefix-cls} {
+			border-color: transparent;
+		}
+	}
+}
+
+.content-container {
+	height: calc(100% - 56px);
+	display: flex;
+	flex-direction: column;
+}
+
+.button-container {
+	position: absolute;
+	bottom: 0;
+	height: getpx($bottom-height);
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 getpx(20);
+
+	.button-cancel {
+		border: none;
+		background-color: transparent;
+		color: #424f66;
+	}
+
+	.button-reset {
+		background-color: transparent;
+		color: #424f66;
+	}
+
+	.button-cancel:hover,
+	.button-reset:hover {
+		color: #424f66;
+		border-color: transparent;
+	}
+
+	.button-ok {
+		border: none;
+		width: getpx(70);
+		height: getpx(30);
+		color: #fff;
+		text-align: center;
+		background: #0a7bff;
+	}
+}
+
+.left-part {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	// .button-cancel {
+	// 	border: none;
+	// 	background-color: unset;
+
+	// 	&:hover {
+	// 		color: $component-foreground-color;
+	// 	}
+	// }
+}

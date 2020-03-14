@@ -1,0 +1,16 @@
+@import '~stassets/styles/index.scss';
+
+.more-icon {
+	width: 18px;
+	height: 17px;
+	color: $component-foreground-color;
+
+	&:hover {
+		color: white;
+	}
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+}

@@ -1,0 +1,23 @@
+@import '~stassets/styles/index.scss';
+
+.task-result-thumbnail {
+	background-color: #171b25;
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.item {
+	height: 30%;
+	margin-right: 10px;
+	margin-bottom: 10px;
+
+	&.face {
+		width: 35px;
+	}
+
+	&.body {
+		width: 19px;
+	}
+}

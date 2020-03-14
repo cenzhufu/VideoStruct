@@ -1,0 +1,85 @@
+@import '~stassets/styles/index.scss';
+
+.units-management-all {
+	height: 100%;
+	// background: $component-background-color;
+	border-radius: $card-radius;
+	padding: getpx(40) getpx(56);
+	box-sizing: border-box;
+
+	:global {
+		.ant-input-affix-wrapper {
+			display: block;
+			margin-top: getpx(24);
+			margin-bottom: getpx(32);
+			width: getpx(360);
+		}
+	}
+}
+
+.units-management-block {
+	height: 48px;
+	line-height: 48px;
+	margin-bottom: 24px;
+	color: $text-color;
+	border-bottom: 1px solid $dark-gray;
+}
+
+.units-management-title {
+	width: getvw(72);
+	height: getvh(25);
+	font-size: 18px;
+	font-family: PingFang-SC-Medium, Arial, sans-serif;
+	font-weight: 500;
+	margin: getvh(12) 0 0 getvw(16);
+}
+
+.units-filter-add-button {
+	border-radius: $card-radius;
+	margin-left: getvw(24);
+}
+
+.units-search-area {
+	width: getvw(500);
+	border-radius: $card-radius;
+	margin-left: auto;
+	border: 1px solid $dark-gray;
+	right: getvw(12);
+}
+
+.units-area-show {
+	height: calc(100% - 80px - 32px);
+	border-radius: $card-radius 0 0 $card-radius;
+	overflow-y: scroll;
+}
+
+.popover-sheet {
+	width: getpx(80);
+	padding: getpx(10) 0;
+}
+
+.popover-sheet-item {
+	height: getpx(36);
+	background-color: white;
+	font-size: 14px;
+	color: $text-color;
+	display: flex;
+	align-items: center;
+	padding-left: getpx(8);
+
+	&:hover {
+		background-color: #f2f4f5;
+	}
+
+	.icon {
+		margin-right: getpx(8);
+	}
+}
+
+.search-input {
+	:global {
+		.ant-input {
+			background-color: #f2f4f5;
+		}
+	}
+}

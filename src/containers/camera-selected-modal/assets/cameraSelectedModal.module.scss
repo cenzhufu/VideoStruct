@@ -1,0 +1,44 @@
+.cameraSelected-modal {
+	position: relative;
+}
+.cameraSelected-item {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	& > label {
+		width: 25%;
+		margin: 0 0 5px 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		& > span:nth-child(2) {
+			max-width: 140px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+}
+.footer {
+	display: flex;
+	align-items: center;
+
+	.footer-tip {
+		color: $text-second-color;
+		display: flex;
+		align-items: center;
+		margin-right: auto;
+	}
+
+	.select-count {
+		color: white;
+		margin-left: 8px;
+	}
+}
+
+.cancel {
+	background-color: unset;
+	border-color: $text-second-color;
+	color: $text-second-color;
+}

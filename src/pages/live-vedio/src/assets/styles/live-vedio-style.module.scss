@@ -1,0 +1,99 @@
+@import '~stassets/styles/index.scss';
+
+.live-video-page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: getpx(24);
+	background-color: #080c17;
+	display: flex;
+	flex-direction: column;
+}
+
+.top-content {
+	background-color: #04070d;
+	flex: 1 1 78%;
+	display: flex;
+	background: url('../images/border.png') no-repeat;
+	background-size: 100% 100%;
+	padding: getpx(44) getpx(44);
+}
+
+.tip-info {
+	flex: 1 1 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.item-value {
+	font-size: 16px;
+	color: $text-second-color;
+
+	&.face {
+		font-size: getpx(20);
+
+		.icon {
+			display: inline-block;
+			margin-right: getpx(32);
+			background: url('../images/face.png') no-repeat;
+			background-size: 100% 100%;
+			width: getpx(17);
+			height: getpx(18);
+		}
+	}
+
+	&.camera {
+		.icon {
+			display: inline-block;
+			margin-right: getpx(8);
+			background: url('../images/camera.png') no-repeat;
+			background-size: 100% 100%;
+			width: getpx(14);
+			height: getpx(16);
+		}
+	}
+
+	&.car {
+		font-size: getpx(20);
+
+		.icon {
+			display: inline-block;
+			margin-right: getpx(32);
+			background: url('../images/car.png') no-repeat;
+			background-size: 100% 100%;
+			width: getpx(20);
+			height: getpx(14);
+		}
+	}
+}
+
+.info-item {
+	& .item-value:not(:last-child) {
+		margin-bottom: getpx(12);
+	}
+}
+
+.item-title {
+	font-size: 20px;
+	color: #c8d6e4;
+	margin-bottom: getpx(24);
+}
+
+.video {
+	flex: 1 1 75%;
+}
+
+.bottom-cotent {
+	flex: 1 1 22%;
+}
+
+.tabs-container {
+	display: flex;
+	justify-content: center;
+	padding: getpx(10) 0;
+}
+
+.results-scroll-container {
+	width: 100%;
+}

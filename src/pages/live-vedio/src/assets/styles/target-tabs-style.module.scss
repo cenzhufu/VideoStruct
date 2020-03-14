@@ -1,0 +1,32 @@
+@import '~stassets/styles/index.scss';
+
+.tabs {
+	display: flex;
+	color: $text-second-color;
+}
+
+.item {
+	display: inline-block;
+	position: relative;
+	width: getpx(50);
+	text-align: center;
+	cursor: pointer;
+
+	&:not(:last-child)::after {
+		content: '';
+		right: 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		background-color: $text-second-color;
+	}
+
+	&:hover {
+		color: #0a7bff;
+	}
+}
+
+.selected {
+	color: #0a7bff;
+}

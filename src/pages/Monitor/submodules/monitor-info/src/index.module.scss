@@ -1,0 +1,96 @@
+@import '~stassets/styles/index.scss';
+
+.monitor-info-item {
+	padding: 10px;
+	margin-bottom: 16px;
+	background: $dark-gray;
+	border-radius: $card-radius;
+	position: relative;
+	display: block;
+
+	.image-outer-container {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.image-container {
+		height: getvmin(144);
+		width: getvmin(256);
+	}
+
+	.tip {
+		display: block;
+		width: 44px;
+		height: 20px;
+		color: white;
+		text-align: center;
+		background: rgba(237, 54, 118, 1);
+		border-radius: $card-radius 0 $card-radius 0;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	.right-monitorList-footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		padding-top: 10px;
+
+		& > span:nth-child(1) {
+			font-size: 16px;
+			font-weight: 400;
+		}
+
+		& > span:nth-child(2) {
+			color: $text-second-color;
+		}
+	}
+}
+
+.type-tip {
+	flex: 0 0 auto;
+	margin-right: 8px;
+}
+
+.time-icon {
+	color: $component-foreground-color;
+}
+
+.tips {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.time-tip,
+.name-tip {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 50%;
+	color: $text-second-color;
+}
+
+.name,
+.time {
+	margin-left: 5px;
+	@include text-trunk();
+}
+
+.time-tip {
+	margin-right: 8px;
+}
+
+.name-icon {
+	width: 16px;
+	height: 18px;
+	flex: 0 0 auto;
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+}

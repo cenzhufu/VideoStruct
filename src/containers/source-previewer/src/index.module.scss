@@ -1,0 +1,319 @@
+@import '~stassets/styles/index.scss';
+
+.source-previewer {
+	.detected-panel {
+		width: getpx(280);
+		height: getpx(609);
+	}
+
+	.controller-bar {
+		height: getpx(48);
+		background-color: #1c222e;
+		display: flex;
+		align-items: center;
+		padding: 0 24px;
+	}
+
+	.arrow-item {
+		transition: 0.3s ease-out;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:active {
+			transform: scale(1.1, 1.1);
+		}
+	}
+
+	.arrow-item.disable {
+		&:active {
+			transform: scale(1, 1);
+			animation-name: shake-horizontal;
+			animation-duration: 100ms;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: 3;
+		}
+	}
+
+	.left-arrow {
+		display: block;
+		position: absolute;
+		// left: 24px;
+		top: 50%;
+		// margin-top: -30px;
+		// width: 60px;
+		// height: 60px;
+		width: 40px;
+		height: 40px;
+		margin-top: -20px;
+		left: 24px;
+		background-image: url(./assets/images/prev.png);
+	}
+
+	.right-arrow {
+		display: block;
+		position: absolute;
+		// right: 24px;
+		top: 50%;
+		// margin-top: -30px;
+		// width: 60px;
+		// height: 60px;
+		width: 40px;
+		height: 40px;
+		margin-top: -20px;
+		right: 24px;
+		background-image: url(./assets/images/next.png);
+	}
+
+	.crop-controll-bar {
+		position: absolute;
+		bottom: 12px;
+	}
+
+	.video {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+}
+
+.preview-title {
+	display: flex;
+	align-items: center;
+
+	.title {
+		margin-left: 8px;
+		margin-right: 8px;
+		max-width: 300px;
+		@include text-trunk();
+	}
+}
+
+.indicator {
+	// background-color: rgba(6, 58, 107, 0.5);
+	color: #fff;
+	text-align: center;
+	padding: $card-radius 16px;
+	position: absolute;
+	bottom: 16px;
+	left: 16px;
+	font-size: 12px;
+	letter-spacing: 0;
+}
+
+@keyframes shake-horizontal {
+	2% {
+		transform: translate(10px, 0) rotate(0);
+	}
+
+	4% {
+		transform: translate(-5px, 0) rotate(0);
+	}
+
+	6% {
+		transform: translate(6px, 0) rotate(0);
+	}
+
+	8% {
+		transform: translate(8px, 0) rotate(0);
+	}
+
+	10% {
+		transform: translate(-7px, 0) rotate(0);
+	}
+
+	12% {
+		transform: translate(8px, 0) rotate(0);
+	}
+
+	14% {
+		transform: translate(3px, 0) rotate(0);
+	}
+
+	16% {
+		transform: translate(3px, 0) rotate(0);
+	}
+
+	18% {
+		transform: translate(5px, 0) rotate(0);
+	}
+
+	20% {
+		transform: translate(-2px, 0) rotate(0);
+	}
+
+	22% {
+		transform: translate(-2px, 0) rotate(0);
+	}
+
+	24% {
+		transform: translate(10px, 0) rotate(0);
+	}
+
+	26% {
+		transform: translate(5px, 0) rotate(0);
+	}
+
+	28% {
+		transform: translate($card-radius, 0) rotate(0);
+	}
+
+	30% {
+		transform: translate(-6px, 0) rotate(0);
+	}
+
+	32% {
+		transform: translate(10px, 0) rotate(0);
+	}
+
+	34% {
+		transform: translate(0, 0) rotate(0);
+	}
+
+	36% {
+		transform: translate(-1px, 0) rotate(0);
+	}
+
+	38% {
+		transform: translate(-7px, 0) rotate(0);
+	}
+
+	40% {
+		transform: translate(-3px, 0) rotate(0);
+	}
+
+	42% {
+		transform: translate(3px, 0) rotate(0);
+	}
+
+	44% {
+		transform: translate(-$card-radius, 0) rotate(0);
+	}
+
+	46% {
+		transform: translate(-7px, 0) rotate(0);
+	}
+
+	48% {
+		transform: translate(-6px, 0) rotate(0);
+	}
+
+	50% {
+		transform: translate(-1px, 0) rotate(0);
+	}
+
+	52% {
+		transform: translate(-9px, 0) rotate(0);
+	}
+
+	54% {
+		transform: translate(8px, 0) rotate(0);
+	}
+
+	56% {
+		transform: translate(-2px, 0) rotate(0);
+	}
+
+	58% {
+		transform: translate(-1px, 0) rotate(0);
+	}
+
+	60% {
+		transform: translate(10px, 0) rotate(0);
+	}
+
+	62% {
+		transform: translate(9px, 0) rotate(0);
+	}
+
+	64% {
+		transform: translate(8px, 0) rotate(0);
+	}
+
+	66% {
+		transform: translate(0, 0) rotate(0);
+	}
+
+	68% {
+		transform: translate(9px, 0) rotate(0);
+	}
+
+	70% {
+		transform: translate(-3px, 0) rotate(0);
+	}
+
+	72% {
+		transform: translate(-1px, 0) rotate(0);
+	}
+
+	74% {
+		transform: translate(-$card-radius, 0) rotate(0);
+	}
+
+	76% {
+		transform: translate(9px, 0) rotate(0);
+	}
+
+	78% {
+		transform: translate(-9px, 0) rotate(0);
+	}
+
+	80% {
+		transform: translate(6px, 0) rotate(0);
+	}
+
+	82% {
+		transform: translate(0, 0) rotate(0);
+	}
+
+	84% {
+		transform: translate(0, 0) rotate(0);
+	}
+
+	86% {
+		transform: translate(1px, 0) rotate(0);
+	}
+
+	88% {
+		transform: translate(7px, 0) rotate(0);
+	}
+
+	90% {
+		transform: translate(7px, 0) rotate(0);
+	}
+
+	92% {
+		transform: translate(-3px, 0) rotate(0);
+	}
+
+	94% {
+		transform: translate(-$card-radius, 0) rotate(0);
+	}
+
+	96% {
+		transform: translate(1px, 0) rotate(0);
+	}
+
+	98% {
+		transform: translate(3px, 0) rotate(0);
+	}
+
+	0%,
+	100% {
+		transform: translate(0, 0) rotate(0);
+	}
+}
+
+// 二期
+.custom-message-container {
+	display: inline-block;
+}
+
+.custom-message-btn {
+	color: #0a7bff;
+	margin-left: getpx(15);
+	cursor: pointer;
+}

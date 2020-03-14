@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 60 60" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g  transform="translate(-1185.000000, -510.000000)">
+            <g transform="translate(323.000000, 205.000000)">
+                <g transform="translate(892.000000, 335.000000) scale(-1, 1) translate(-892.000000, -335.000000) translate(862.000000, 305.000000)">
+                    <g transform="translate(19.000000, 14.000000)" fill="#FFFFFF">
+                        <polygon points="15.5926212 0.600174435 17.6781549 2.66996434 4.2492705 16.0001236 17.6781549 29.3302829 15.5926212 31.4000384 0.0782031501 16.0001236"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+@import '~stassets/styles/index.scss';
+
+$popover-prefix-cls: #{$antd-prefix}-popover;
+
+.#{$popover-prefix-cls} {
+	.#{$popover-prefix-cls}-inner-content {
+		padding: 0;
+	}
+
+	.#{$popover-prefix-cls}-arrow {
+		width: 20px;
+		height: 20px;
+		border-width: 15px;
+	}
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>quanbuwenjian</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.00148698885 0.00356877323 19.9947907 0.00356877323 19.9947907 15.2168525 0.00148698885 15.2168525"></polygon>
+    </defs>
+    <g id="11.27-目标搜索更新" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="目标搜索-默认页面" transform="translate(-40.000000, -308.000000)">
+            <g id="Group-15" transform="translate(24.000000, 260.000000)">
+                <g id="资源列表" transform="translate(0.000000, 32.000000)">
+                    <g id="Group-8-Copy">
+                        <g id="Group-4" transform="translate(16.000000, 14.000000)">
+                            <g id="Group-8">
+                                <g id="Group-10">
+                                    <g id="quanbuwenjian" transform="translate(0.000000, 2.000000)">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <g id="Clip-2"></g>
+                                        <path d="M0.271350682,15.0956382 L4.59920694,4.23938042 L18.0135812,4.23938042 L18.0135812,1.82522924 L7.70919455,1.82522924 L6.03159851,0.00356877323 L0.73197026,0.00356877323 C0.327707559,0.00356877323 0,0.322750929 0,0.716480793 L0,14.54171 C0,14.7654275 0.105898389,14.9649566 0.271350682,15.0956382 Z" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                                        <path d="M15.505824,14.5561338 C15.2956629,14.9195539 14.7802478,15.2168525 14.3603717,15.2168525 L0.644758364,15.2168525 C0.224981413,15.2168525 0.0534324659,14.9195539 0.26361834,14.5561338 L4.66272615,6.94964064 C4.87288724,6.5863197 5.38830235,6.28902107 5.80815366,6.28902107 L19.523891,6.28902107 C19.9436679,6.28902107 20.1151921,6.5863197 19.9049318,6.94964064 L15.505824,14.5561338 Z" id="Fill-3" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

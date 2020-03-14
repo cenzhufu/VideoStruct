@@ -1,0 +1,62 @@
+@import '~stassets/styles/index.scss';
+
+$dialog-prefix-cls: #{$antd-prefix}-modal;
+
+.edit-area-dialog {
+	:global {
+		.#{$dialog-prefix-cls} {
+			&-title {
+				font-size: 16px;
+				color: #222f3e;
+			}
+
+			&-content {
+				background-color: white;
+			}
+
+			&-header {
+				background-color: white;
+				border-color: transparent;
+			}
+
+			&-footer {
+				border-color: transparent;
+			}
+		}
+	}
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	padding: 0 getpx(86) getpx(24) getpx(30);
+
+	:global {
+		.ant-input {
+			background-color: #f2f4f5;
+		}
+
+		.ant-cascader-picker {
+			background-color: #f2f4f5;
+		}
+	}
+}
+
+.item-title {
+	flex: 0 0 getpx(56);
+	margin-right: getpx(12);
+}
+
+.item-title-description {
+	@extend .item-title;
+
+	align-self: flex-start;
+}
+
+.cascader-area {
+	flex: 1 1 auto;
+}
+
+.popover-cascader-area {
+	// position: relative;
+}

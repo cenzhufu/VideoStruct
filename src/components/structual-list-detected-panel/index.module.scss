@@ -1,0 +1,261 @@
+@import '~stassets/styles/index.scss';
+$tab-prefix-cls: #{$antd-prefix}-tabs;
+
+.detected-panel {
+	position: relative;
+	color: #989ca6;
+	// background-color: $component-background-color;
+	background: #1c222e;
+	// height: 100%;
+	width: getpx(280);
+	height: getpx(609);
+	display: flex;
+	flex-direction: column;
+}
+
+.target-tabs {
+	// position: relative;
+	display: flex;
+	flex-direction: column;
+	// height: 100%;
+	height: getvmin(490 + 130 -50);
+
+	.target-tabs-header {
+		margin: 0;
+		flex: 0 0 50px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		.target-tabs-title {
+			display: inline-block;
+			width: 116px;
+			line-height: 28px;
+			background-color: $text-dark-color;
+			text-align: center;
+		}
+	}
+
+	.target-content-body-wrapper {
+		flex: 1;
+		overflow: auto;
+	}
+
+	.target-content-body {
+		display: flex;
+		text-align: center;
+		// height: 100%;
+
+		.target-content-item {
+			padding-left: 8px;
+			position: relative;
+			flex: 0.5;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	:global {
+		// 定制antd
+		.#{$tab-prefix-cls} {
+			&-nav {
+				height: 44px;
+				line-height: 44px;
+				margin-left: 10px;
+			}
+
+			&-tab {
+				padding: 0;
+				height: 20px;
+				width: getvmin(110);
+				margin: 0;
+				line-height: 20px;
+				text-align: center;
+				font-size: 14px;
+				user-select: none;
+			}
+
+			&-bar {
+				border-bottom-color: $dark-gray;
+				margin: 0;
+				flex: 0 0 44px;
+			}
+
+			&:not(&-vertical) {
+				> .#{$tab-prefix-cls}-content {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+// 二期
+@mixin custom-scrollbar() {
+	&::-webkit-scrollbar {
+		width: getpx(8);
+		height: getpx(1);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		height: getpx(40);
+		background: #eee;
+		border-radius: 0;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #263247;
+		box-shadow: none;
+		border-radius: 0;
+	}
+}
+
+.detail-search-tab {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	:global {
+		.ant-tabs-tabpane-active {
+			overflow-x: none;
+			overflow-y: none;
+			// overflow-y: auto;
+			// @include custom-scrollbar();
+		}
+
+		.ant-tabs-nav .ant-tabs-tab {
+			margin: 0;
+		}
+
+		// 定制antd
+		.#{$tab-prefix-cls} {
+			&-nav {
+				height: getpx(48);
+				line-height: getpx(48);
+				// margin-left: 10px;
+				border-bottom: none;
+			}
+
+			&-tab {
+				padding: 0;
+				height: 20px;
+				width: getvmin(110);
+				margin: 0;
+				line-height: 20px;
+				text-align: center;
+				font-size: 16px;
+				user-select: none;
+
+				&:hover {
+					color: #fff !important;
+				}
+			}
+
+			&-tab-active {
+				color: #fff !important;
+			}
+
+			&-ink-bar {
+				//底部active条
+				background: none;
+			}
+
+			&-bar {
+				border-bottom-color: $text-color;
+				margin: 0;
+				flex: 0 0 getpx(48);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			&:not(&-vertical) {
+				> .#{$tab-prefix-cls}-content {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+.structural-item {
+	// border-radius: $card-radius;
+	overflow: hidden;
+	margin-right: 8px;
+	margin-bottom: 8px;
+
+	// &:hover {
+	// 	border: 1px solid $component-foreground-color;
+	// }
+}
+
+.structural-item-face,
+.structural-item-content-face {
+	width: getpx(100);
+	height: getpx(100);
+	position: relative;
+
+	&:hover::before {
+		position: absolute;
+		content: '';
+		display: inline-block;
+		width: getpx(100);
+		height: getpx(100);
+		// border-radius: getpx(4);
+		border: 1px solid $component-foreground-color;
+		z-index: 5;
+		top: 0;
+		left: 0;
+	}
+}
+
+.structural-item-body,
+.structural-item-content-body {
+	width: getpx(100);
+	height: getpx(200);
+	position: relative;
+
+	&:hover::before {
+		position: absolute;
+		content: '';
+		display: inline-block;
+		width: getpx(100);
+		height: getpx(200);
+		// border-radius: getpx(4);
+		border: 1px solid $component-foreground-color;
+		z-index: 5;
+		top: 0;
+		left: 0;
+	}
+}
+
+.structural-item-content {
+	// border-radius: $card-radius;
+	overflow: hidden;
+	// margin-right: 8px;
+	// margin-bottom: 8px;
+}
+
+// 用于上传打开的查看详情右侧标题居中
+.from-upload-detected-panel {
+	:global {
+		.ant-tabs-nav-scroll {
+			text-align: center;
+		}
+	}
+}
+
+.target-tabs-single {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	align-content: flex-start;
+	height: getvmin(490 + 130 -50);
+	box-sizing: border-box;
+	padding: 10px 30px 0;
+	overflow-y: auto;
+}

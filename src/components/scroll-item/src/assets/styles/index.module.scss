@@ -1,0 +1,10 @@
+@import '~stassets/styles/index.scss';
+
+.scroll-item-container {
+	position: relative;
+	width: getpx(160);
+	height: getpx(90);
+	&:hover {
+		border: 1px solid #0a7bff;
+	}
+}

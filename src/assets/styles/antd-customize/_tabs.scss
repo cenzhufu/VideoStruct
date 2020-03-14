@@ -1,0 +1,8 @@
+@import '~stassets/styles/index.scss';
+
+$tabs-prefix-cls: #{$antd-prefix}-tabs;
+
+.#{$tabs-prefix-cls} {
+	// 源码： .reset-component设置
+	color: $text-second-color !important;
+}

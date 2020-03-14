@@ -1,0 +1,56 @@
+// 基础
+
+// 基础调色板
+// key对应basic.style.js中colors的key值
+$palettes: get('colors'); // 读取basic.style.js中的colors配置
+$background-color: map-get($palettes, backgroundColor); // 背景色
+
+$second-background-color: map-get(
+	$palettes,
+	secondBackgroundColor
+); // 辅助背景色
+$component-background-color: map-get(
+	$palettes,
+	componentBackgroundColor
+); // 组件背景色
+$component-foreground-color: map-get($palettes, primaryColor);
+$text-color: map-get($palettes, textColor); // 文字颜色
+$text-second-color: map-get($palettes, textSecondColor); // 文字的辅助颜色
+$text-dark-color: map-get($palettes, textDarkColor);
+$background-color-hover: map-get(
+	$palettes,
+	backgroundHoverColor
+); // 背景hover时的颜色
+$dark-gray: map-get($palettes, darkGrayColor);
+
+$antd-prefix: 'ant'; // 本来想通过less-loader修改ant-prefix，但是修改之后没有用，所以这里这个值也别修改
+
+$background-normalColor: map-get($palettes, normalColor); // 背景色
+
+// 圆角
+$card-radius: get('card-radius');
+
+// index
+$low-layer-index: 1;
+$mid-layer-index: 10;
+$hight-layer-index: 99;
+$top-most-layer-index: 999;
+
+// 阴影
+$shadow-color: map-get($palettes, borderColor);
+
+$base-font-size: 14px;
+$middle-font-size: 16px;
+$larger-font-size: 20px;
+
+// 日期组件颜色样式
+$second-background-color: map-get($palettes, datepickerCalender);
+$hover-color: map-get($palettes, datepickerCalenderRangeCell);
+
+// hover
+$hover-color: map-get($palettes, hoverColor);
+
+// 下边的语法，可以把变量导出去，供js使用
+// :export {
+// 	backgroundColor: $background-color;
+// }

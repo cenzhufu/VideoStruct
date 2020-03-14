@@ -1,0 +1,74 @@
+@import '~stassets/styles/index.scss';
+
+.search-previewer-cropper {
+	height: 48px;
+	position: relative;
+	// padding: 0 32px;
+	background: #1c222e;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cancel-cropper-button,
+.clear-all {
+	width: 64px;
+	height: 24px;
+	font-size: 12px;
+	// margin-right: 16px;
+	border: none;
+	color: #0a7bff;
+}
+
+.cropper-button {
+	height: 24px;
+	font-size: 12px;
+	border-radius: 0;
+}
+
+.button-group {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+.crooper-buttons {
+	z-index: 100;
+	margin-right: getpx(32);
+}
+
+.cropper {
+	// height: calc(7.4vmin);
+	height: 100%;
+	width: calc((7.4vmin));
+	// border: $component-foreground-color 1px dashed;
+	border-radius: $card-radius;
+	margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: $component-foreground-color;
+}
+
+.placeholder {
+	border: $component-foreground-color 1px dashed;
+	width: 100%;
+	height: 100%;
+}
+
+.mask-layer {
+	z-index: 50;
+}
+
+.cropper-icon {
+	display: inline-block;
+	width: getpx(24);
+	height: getpx(24);
+	background: url(../images/cut-default.png) no-repeat center center;
+	cursor: pointer;
+}
+
+.cropper-icon-active {
+	background: url(../images//cut-active.png) no-repeat center center;
+}

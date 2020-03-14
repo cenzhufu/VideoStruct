@@ -1,0 +1,84 @@
+@import '~stassets/styles/index.scss';
+
+.structural-wraper {
+	margin: 0 16px 16px 0;
+	// border: 1px solid red;
+	background: #fff;
+	padding: 12px;
+}
+
+.structural-wraper:hover {
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.structural-car {
+	width: getpx(284);
+	height: getpx(210);
+}
+
+.structural-car-container {
+	display: flex;
+	width: getpx(284);
+	// height: getpx(184);
+	// padding: 12px;
+	// background: #fff;
+	// border: 1px solid red;
+}
+
+.structural-car-pic {
+	// width: getpercent(100, 136);
+	border-radius: $card-radius;
+	// border: 1px solid red;
+	// background: red;
+	// margin-right: 16px;
+	// margin-bottom: 10px;
+	width: getpx(174);
+	height: getpx(140);
+}
+
+.structural-car-link-face-icon-wraper {
+	width: getpx(6);
+	height: getpx(140);
+	line-height: getpx(140);
+	margin: 0 2px;
+}
+
+.structural-car-link-face-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.structural-car-link-face,
+.face-Placeholder {
+	width: getpx(100);
+	height: getpx(100);
+	margin-bottom: getpx(8);
+}
+
+.structural-car-number {
+	width: getpx(100);
+	height: getpx(32) x;
+	margin-top: 8px;
+	text-align: center;
+	line-height: getpx(32) x;
+	color: #fff;
+	background: #011b7a;
+}
+
+.structural-car-attribute-wraper {
+	display: flex;
+	margin-top: 12px;
+	background: #fff;
+	color: $text-color;
+	flex-wrap: wrap;
+}
+
+.structural-car-attribute {
+	width: 50%;
+	margin-bottom: 8px;
+}
+
+.structural-car-type {
+	width: 100%;
+	margin-bottom: 8px;
+}

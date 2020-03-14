@@ -1,0 +1,25 @@
+@import '~stassets/styles/index.scss';
+
+.progress-container {
+	height: 162px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	:global {
+		.ant-progress-text {
+			color: $text-color;
+		}
+	}
+}
+
+.button-group {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.cancel-button {
+	background-color: unset;
+	border: 1px solid $text-second-color;
+	color: $text-second-color;
+}

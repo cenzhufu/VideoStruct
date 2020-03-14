@@ -1,0 +1,164 @@
+@import '~stassets/styles/index.scss';
+
+$setting-background-color: #f2f4f5;
+
+.setting-advance {
+	display: flex;
+	flex: auto;
+	height: 100%;
+	padding: getpx(24);
+	background-color: $setting-background-color;
+
+	:global {
+		.ant-cascader-picker-clear,
+		.ant-cascader-menus ul,
+		.ant-cascader-menus ol {
+			background: $setting-background-color;
+		}
+
+		.ant-table-thead > tr > th {
+			background: #e5e9ec;
+		}
+
+		.ant-table-placeholder {
+			background: $setting-background-color;
+		}
+
+		.ant-table-tbody > tr > td {
+			border: none;
+		}
+
+		.ant-cascader-picker {
+			background: $setting-background-color;
+		}
+
+		.ant-layout-sider {
+			// background-color: $setting-background-color;
+			margin-right: getpx(16);
+			background-color: white;
+		}
+
+		.ant-menu {
+			background-color: white;
+		}
+	}
+}
+
+.setting-advance-title-block {
+	border-radius: $card-radius $card-radius 0 0;
+	font-size: 20px;
+	height: getpx(64);
+	line-height: getpx(64);
+	border-bottom: 1px solid rgba(200, 214, 228, 0.5);
+	margin-bottom: getpx(12);
+}
+
+.setting-advance-title {
+	width: getvw(72);
+	height: getvh(25);
+	font-size: 20px;
+	font-weight: 500;
+	padding: 0 0 getvh(25) getvw(32);
+}
+
+.setting-advance-sider-menus {
+	width: getvw(328);
+	height: 100%;
+	// background: $component-background-color;
+	border-radius: $card-radius;
+}
+
+.setting-advance-menus {
+	:global {
+		.ant-menu-inline .ant-menu-item::after {
+			border-right: 0;
+		}
+
+		// .ant-menu-inline .ant-menu-item:not(:last-child) {
+		// 	margin-bottom: getvh(18);
+		// }
+
+		.ant-menu-inline .ant-menu-submenu {
+			padding-bottom: getvh(18);
+		}
+	}
+}
+
+.setting-advance-side-menu {
+	border-right: none;
+}
+
+.setting-advance-submenu {
+	height: getvh(90);
+	margin-top: getvh(100);
+	text-decoration: none;
+}
+
+.setting-advance-submenu-title {
+	font-size: 16px;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+}
+
+.setting-advance-submenu-link {
+	text-decoration: none;
+}
+
+.content {
+	height: 100%;
+	background-color: white;
+	overflow: hidden;
+}
+
+.account,
+.record,
+.device,
+.role,
+.unit,
+.data {
+	flex: 0 0 auto;
+	margin-right: getpx(12);
+}
+
+.account {
+	background: url('./../images/account.png') no-repeat;
+	width: 14px;
+	height: 14px;
+	background-size: 100% 100%;
+}
+
+.record {
+	background: url('./../images/record.png') no-repeat;
+	width: 12px;
+	height: 13px;
+	background-size: 100% 100%;
+}
+
+.unit {
+	background: url('./../images/unit.png') no-repeat;
+	width: 14px;
+	height: 14px;
+	background-size: 100% 100%;
+}
+
+.role {
+	background: url('./../images/role.png') no-repeat;
+	width: 14px;
+	height: 12px;
+	background-size: 100% 100%;
+}
+
+.device {
+	background: url('./../images/device.png') no-repeat;
+	width: 16px;
+	height: 16px;
+	background-size: 100% 100%;
+}
+
+.data {
+	background: url('./../images/data.png') no-repeat;
+	width: 16px;
+	height: 15px;
+	background-size: 100% 100%;
+}

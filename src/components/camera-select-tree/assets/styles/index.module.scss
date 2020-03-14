@@ -1,0 +1,72 @@
+@import '~stassets/styles/index.scss';
+
+.camera-tree-wrap {
+	:global {
+		.action svg {
+			color: $text-second-color;
+		}
+	}
+
+	.camera-tree-content {
+		display: flex;
+
+		.camera-tree-left,
+		.camera-tree-right {
+			width: 50%;
+			height: 372px;
+			overflow: hidden;
+			overflow-y: auto;
+		}
+
+		.camera-tree-right {
+			padding-left: 40px;
+			border-left: 1px solid $dark-gray;
+
+			ul {
+				margin: 0;
+				padding: 0;
+
+				.list-li {
+					height: 20px;
+					line-height: 20px;
+					margin: 8px 0;
+					list-style: none;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
+	.camera-tree-footer {
+		height: 32px;
+		line-height: 32px;
+		display: flex;
+		border-top: 1px solid $dark-gray;
+
+		.camera-checkbox-group {
+			width: 50%;
+			padding-left: 24px;
+			border-left: 1px solid $dark-gray;
+
+			.camera-checkbox {
+				color: $text-color;
+			}
+		}
+	}
+
+	// .ant-tree li .ant-tree-node-content-wrapper {
+	// 	color: $text-color;
+	// }
+
+	// .ant-tree li .ant-tree-node-content-wrapper:hover {
+	// 	color: $component-foreground-color;
+	// 	background: rgba(39, 69, 112, 1);
+	// }
+
+	.ant-tree-checkbox-inner {
+		height: 14px;
+		width: 14px;
+		background: none;
+		border: 1px solid $component-foreground-color;
+	}
+}

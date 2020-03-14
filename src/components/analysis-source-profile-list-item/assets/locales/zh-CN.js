@@ -1,0 +1,8 @@
+export default {
+	ANALYSIS_INFO_STATUS: '状态',
+
+	ANALYSIS_UPLOAD_TIME: '上传时间',
+	ANALYSIS_INFO_ORGANATION: '单位',
+	ANALYSIS_INFO_UPLOADER: '上传人',
+	ANALYSIS_INFO_SIZE: '大小'
+};

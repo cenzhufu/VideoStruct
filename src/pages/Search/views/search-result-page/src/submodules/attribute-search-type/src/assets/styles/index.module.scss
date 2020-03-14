@@ -1,0 +1,75 @@
+@import '~stassets/styles/index.scss';
+
+.search-type-container {
+	display: flex;
+	align-items: center;
+	padding-left: 24px;
+
+	:global {
+		.ant-checkbox-group-item {
+			margin-right: getvmin(48);
+		}
+	}
+}
+
+.search-type-title-container {
+	display: flex;
+	// width: 80px;
+	height: 28px;
+	line-height: 28px;
+	margin-right: getvw(144);
+	font-size: 20px;
+	color: $text-second-color;
+	text-align: left;
+}
+
+.search-type-title {
+	display: flex;
+	// width: 144px;
+}
+
+.search-match-container {
+	display: flex;
+	align-items: center;
+	animation: showMatch 0.2s;
+	//  Firefox
+	-moz-animation: showMatch 0.2s;
+	//  Safari 和 Chrome
+	-webkit-animation: showMatch 0.2s;
+	// Opera
+	-o-animation: showMatch 0.2s;
+
+	.search-match {
+		margin-left: 8px;
+	}
+}
+
+@keyframes showMatch {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@-moz-keyframes showMatch {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes showMatch {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}

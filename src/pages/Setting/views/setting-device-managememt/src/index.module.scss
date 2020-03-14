@@ -1,0 +1,38 @@
+@import '~stassets/styles/index.scss';
+
+.area-device-page {
+	position: relative;
+	height: 100%;
+
+	:global {
+		.ant-tabs-bar {
+			padding: 0 getpx(64);
+			border-color: transparent;
+		}
+
+		.ant-tabs-nav {
+			height: getpx(64);
+			line-height: getpx(40);
+		}
+
+		.ant-tabs-tab {
+			margin-right: getpx(72);
+			padding-left: 0;
+			padding-right: 0;
+			font-size: 16px;
+			color: $text-color;
+		}
+
+		.ant-tabs-nav .ant-tabs-tab-active {
+			color: #0a7bff;
+		}
+
+		.ant-tabs-content {
+			height: calc(100% - 64px);
+		}
+
+		.ant-tabs-tabpane {
+			height: 100%;
+		}
+	}
+}

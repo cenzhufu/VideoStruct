@@ -1,0 +1,184 @@
+@import '~stassets/styles/index.scss';
+
+.account-management-all {
+	height: 100%;
+	// background: $component-background-color;
+	// background: $background-color;
+	border-radius: $card-radius;
+	margin-left: getvw(24);
+	display: flex;
+	flex-direction: column;
+}
+
+.account-management-block {
+	height: 48px;
+	line-height: 48px;
+	margin-bottom: 24px;
+	color: $text-color;
+	flex: 0 0 auto;
+}
+
+.account-management-title {
+	width: getvw(72);
+	height: getvh(25);
+	font-size: 18px;
+	font-family: PingFang-SC-Medium, Arial, sans-serif;
+	font-weight: 500;
+	color: $text-color;
+	line-height: getvh(25);
+	margin: getvh(12) 0 0 getvw(16);
+	flex: 0 0 auto;
+}
+
+.account-filter {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.account-filter-add-button {
+	border-radius: $card-radius;
+	margin-left: getvw(24);
+}
+
+.unities-choose-title {
+	font-size: 14px;
+	font-family: PingFangSC-Medium, Arial, sans-serif;
+	font-weight: 500;
+	color: $text-second-color;
+	line-height: getvh(20);
+	margin: 0 getvh(10) 0 getvw(32);
+}
+
+.unities-choose-menus {
+	.account-ant-cascader {
+		background: #f2f4f5;
+	}
+
+	// :global {
+	// 	.ant-cascader {
+	// 		width: getvw(300);
+	// 	}
+
+	// 	.ant-cascader-menu-item {
+	// 		padding: 20px 20px;
+	// 	}
+
+	// 	.ant-cascader-menus ul,
+	// 	.ant-cascader-menus ol {
+	// 		list-style: none;
+	// 		margin: 10;
+	// 		padding: 0;
+	// 		background: #f2f4f5 !important;
+	// 	}
+	// }
+
+	display: inline;
+	width: getvw(320);
+	border-radius: $card-radius;
+	font-family: PingFangSC-Semibold, Arial, sans-serif;
+	font-weight: 400;
+	color: $text-color;
+	line-height: 20px;
+}
+
+.account-search-area {
+	width: getvw(500);
+	margin-left: auto;
+	right: getvw(20);
+	background: #f2f4f5;
+}
+
+.account-table-content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.account-table-show {
+	height: 100%;
+	margin-top: 24px;
+	padding-left: getvw(20);
+
+	table {
+		button {
+			margin-left: 8px;
+		}
+	}
+
+	overflow-y: scroll;
+	margin-bottom: getvh(40);
+}
+
+.account-table-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.account-data-edit {
+	font-size: 14px;
+	font-family: PingFangSC-Regular，Arial, sans-serif;
+	font-weight: 400;
+	// color: $component-foreground-color;
+	line-height: 20px;
+}
+
+.account-data-delete {
+	font-size: 14px;
+	font-family: PingFangSC-Regular，Arial, sans-serif;
+	font-weight: 400;
+	color: rgba(255, 60, 47, 1);
+	line-height: getvh(20);
+}
+
+.account-data-edit， .account-data-delete {
+	width: getvw(80);
+	height: getvh(32);
+	border-radius: $card-radius;
+	border: 1px solid $component-foreground-color;
+	display: inline-block;
+	text-align: center;
+}
+
+.account-add-form,
+.account-edit-form {
+	width: getvw(800);
+	height: getvh(600);
+
+	:global {
+		.ant-modal {
+			width: getvw(800);
+			height: getvh(600);
+		}
+
+		.ant-modal-header {
+			border-bottom: 0;
+			background: $component-background-color;
+			box-shadow: 0 -1px 0 0 $dark-gray;
+			border-radius: $card-radius $card-radius 0 0;
+			width: getvw(800);
+		}
+
+		.ant-modal-title {
+			color: $text-second-color;
+		}
+
+		.ant-modal-body {
+			background: $background-color;
+			width: getvw(800);
+			text-align: left;
+		}
+
+		.ant-modal-footer {
+			background: $background-color;
+			border-top: 0;
+			width: getvw(800);
+		}
+
+		.ant-select {
+			// width: getvw(400);
+		}
+	}
+}

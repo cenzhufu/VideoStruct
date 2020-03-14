@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle-path</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="单位管理" transform="translate(-1586.000000, -22.000000)" fill-rule="nonzero">
+            <g id="导航栏">
+                <g id="211铃铛" transform="translate(1586.000000, 22.000000)">
+                    <rect id="Rectangle-path" fill="#000000" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                    <path d="M10,18.75 C10.96875,18.75 11.71875,18 11.71875,17.03125 L8.28125,17.03125 C8.28125,18 9.03125,18.75 10,18.75 Z M15.640625,13.15625 L15.640625,8.6875 C15.640625,6 13.734375,3.75 11.25,3.15625 L11.25,2.59375 C11.25,1.96875 10.90625,1.40625 10.3125,1.28125 C9.453125,1.078125 8.75,1.734375 8.75,2.578125 L8.75,3.171875 C6.265625,3.75 4.359375,6 4.359375,8.6875 L4.359375,13.15625 L2.65625,14.90625 L2.65625,15.78125 L17.34375,15.78125 L17.34375,14.90625 L15.640625,13.15625 Z" id="Shape" fill="#BFBFBF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

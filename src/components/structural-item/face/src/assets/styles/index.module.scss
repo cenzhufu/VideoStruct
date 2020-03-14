@@ -1,0 +1,11 @@
+@import '~stassets/styles/index.scss';
+
+.structural-item-face {
+	// width: getpercent(100, 136);
+	border-radius: $card-radius;
+	// border: 1px solid rgba(2, 120, 255, 0.5);
+	// width: getvmin(120);
+	// height: getvmin(120);
+	width: getpx(100);
+	height: getpx(100);
+}

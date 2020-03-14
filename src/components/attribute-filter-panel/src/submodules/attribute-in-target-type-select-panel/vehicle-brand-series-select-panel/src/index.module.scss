@@ -1,0 +1,147 @@
+@import '~stassets/styles/index.scss';
+
+$checkbox-prefix-cls: #{$antd-prefix}-checkbox;
+$checkbox-inner-prefix-cls: #{$checkbox-prefix-cls}-inner;
+$btn-prefix-cls: #{$antd-prefix}-btn;
+$bottom-height: 56;
+
+@mixin scrollbar-no-style() {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.quick-index {
+	width: getpx(60);
+	height: getpx(360);
+	border-right: 1px solid #c8d6e4;
+	overflow-y: auto;
+	padding-top: getpx(5);
+	@include scrollbar-no-style();
+
+	li {
+		text-align: center;
+
+		&:hover {
+			background: #0a7bff;
+			color: #fff;
+		}
+	}
+}
+
+.structural-attribute-panel {
+	position: relative;
+	height: getpx(414);
+	display: flex;
+	// overflow-y: auto;
+	// padding-bottom: getpx($bottom-height);
+
+	.list-container {
+		// flex: 1 1 auto;
+		width: getpx(120);
+		height: calc(100% - #{getpx($bottom-height)});
+		overflow-y: auto;
+		border-right: 1px solid #c8d6e4;
+		@include scrollbar-no-style();
+
+		li {
+			text-indent: getpx(20);
+		}
+	}
+
+	.button-container {
+		// margin-top: auto;
+		// height: getpx(56);
+		// flex: 0 0 auto;
+		position: absolute;
+		bottom: 0;
+		height: getpx($bottom-height);
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 getpx(20);
+
+		.button-cancel {
+			border: none;
+			background-color: unset;
+			color: #424f66;
+
+			// &:hover {
+			// 	color: $component-foreground-color;
+			// }
+		}
+
+		.button-reset {
+			color: #424f66;
+			background-color: transparent;
+		}
+
+		.button-cancel:hover,
+		.button-reset:hover {
+			color: #424f66;
+			border-color: transparent;
+		}
+
+		.button-ok {
+			border: none;
+			width: getpx(70);
+			height: getpx(30);
+			color: #fff;
+			text-align: center;
+			background: #0a7bff;
+		}
+	}
+
+	:global {
+		.#{$checkbox-inner-prefix-cls} {
+			border-radius: 50%;
+		}
+
+		.#{$btn-prefix-cls} {
+			border-color: transparent;
+		}
+	}
+}
+
+.header {
+	height: getpx(30);
+	line-height: getpx(30);
+	background-color: $background-color;
+	font-size: $base-font-size;
+}
+
+.item {
+	border-bottom: 1px solid $background-color;
+	transition: 0.2s all;
+	cursor: pointer;
+}
+.item_active {
+	background-color: $background-normalColor;
+}
+
+.series-attribute-panel {
+	.series-list-container {
+		width: getpx(250);
+		height: getpx(325);
+		overflow-y: auto;
+		@include scrollbar-no-style();
+	}
+
+	.series-item {
+		text-indent: getpx(20);
+		white-space: nowrap;
+	}
+}
+
+.select-all {
+	background-color: $background-color;
+	text-indent: 20px;
+	padding-top: getpx(6);
+	padding-bottom: getpx(6);
+	display: flex;
+}

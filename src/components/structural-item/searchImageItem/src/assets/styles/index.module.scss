@@ -1,0 +1,14 @@
+@import '~stassets/styles/index.scss';
+
+.select-icon-container {
+	position: absolute;
+	left: 60%;
+	top: 60%;
+
+	.select-icon {
+		svg {
+			width: 34px;
+			height: 34px;
+		}
+	}
+}

@@ -1,0 +1,73 @@
+@import '~stassets/styles/index.scss';
+
+.structural-wraper {
+	margin: 0 10px 10px 0;
+	// border: 1px solid red;
+	background-color: #fff;
+	padding: 12px;
+}
+
+.structural-wraper:hover {
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.structural-car-container {
+	display: flex;
+	width: getpx(282);
+	margin-bottom: getpx(8);
+}
+
+.structural-car-pic {
+	border-radius: $card-radius;
+	width: getpx(174);
+	height: getpx(140);
+}
+
+.structural-car-attribute {
+	padding-left: 8px;
+	color: $text-color;
+	overflow: hidden;
+
+	.structural-car-number {
+		width: 96px;
+		height: 28px;
+		margin-bottom: 16px;
+		text-align: center;
+		line-height: 28px;
+		color: #fff;
+		background: #011b7a;
+	}
+
+	.structural-car-license-plate {
+		margin-bottom: 16px;
+	}
+
+	.structural-car-attribute-item {
+		height: 20px;
+		margin-top: 6px;
+		width: 100px;
+
+		.structural-car-attribute-item-title {
+			display: inline-block;
+			width: 40px;
+			// overflow: hidden;
+			// text-overflow: ellipsis;
+			// white-space: nowrap;
+		}
+
+		.structural-car-attribute-item-content {
+			display: inline-block;
+			width: 60px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.car-model {
+			// display: -webkit-box;
+			// -webkit-box-orient: vertical;
+			// -webkit-line-clamp: 2;
+			// overflow: hidden;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>高级设置_icon_摄像头_act</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="摄像头管理-区域管理-hover" transform="translate(-48.000000, -362.000000)" fill-rule="nonzero">
+            <g id="Group-14" transform="translate(24.000000, 88.000000)">
+                <g id="Group-4-Copy-5" transform="translate(0.000000, 252.000000)">
+                    <g id="5摄像头" transform="translate(24.000000, 22.000000)">
+                        <rect id="Rectangle-path" fill="#000000" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                        <path d="M7.29650355,12.7108166 L5.58585653,12.7108166 L5.58585653,10.5473512 L3.92552265,10.2454723 L3.92552265,17.1886867 L5.58585653,16.6352421 L5.58585653,14.220211 L8.25245336,14.220211 L9.71153464,12.2579982 L7.79963503,11.2517353 L7.29650355,12.7108166 Z M15.950365,13.1636349 L19.8244774,10.6982906 L7.74932188,2.74881329 L6.34055374,2.74881329 L4.42865413,5.76760216 L4.42865413,6.77386511 L15.0447283,13.213948 L15.950365,13.213948 L15.950365,13.1636349 Z M14.4912837,13.6667664 L5.33429079,7.72981492 L4.37834098,8.73607788 L14.9944152,15.1761608 L15.950365,15.1761608 L16.4534964,14.6730293 L16.9566279,13.213948 C16.9566279,13.213948 15.5478598,14.220211 15.4975466,14.220211 C14.944102,13.868019 14.4912837,13.6667664 14.4912837,13.6667664 Z" id="Shape" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,60 @@
+@import '~stassets/styles/index.scss';
+
+.structural-item-segment {
+	width: 100%;
+	height: getpx(20);
+	display: flex;
+	align-items: center;
+	border: 1px solid #c8d6e4;
+	font-size: 12px;
+
+	.first-segment {
+		flex: 2 2 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.second-segment {
+		flex: 3 3 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&.capture {
+		.first-segment {
+			background-color: #76b6ed;
+			color: white;
+		}
+
+		.second-segment {
+			// background-color: white;
+			color: $text-second-color;
+		}
+	}
+
+	&.analysis {
+		.first-segment {
+			background-color: $text-second-color;
+			color: white;
+		}
+
+		.second-segment {
+			// TODO: 这个怎么处理？
+			color: $text-second-color;
+		}
+	}
+}
+
+.capture {
+	border: 1px solid #c8d6e4;
+	overflow: hidden;
+}
+
+.analysis {
+	// TODO: 这个怎么处理？
+	// border: rgba($text-color, 0.5) solid 1px;
+	border: 1px solid #c8d6e4;
+	overflow: hidden;
+}

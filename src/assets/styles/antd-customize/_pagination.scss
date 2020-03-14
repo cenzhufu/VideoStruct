@@ -1,0 +1,22 @@
+@import '~stassets/styles/index.scss';
+
+$pagination-prefix-cls: #{$antd-prefix}-pagination;
+
+.#{$pagination-prefix-cls} {
+	// 源码为：background-color: @component-background;
+	&-item {
+		&-active {
+			background-color: $component-foreground-color !important;
+
+			a {
+				color: white !important;
+			}
+
+			&:focus {
+				a {
+					color: white !important;
+				}
+			}
+		}
+	}
+}

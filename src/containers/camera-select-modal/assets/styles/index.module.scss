@@ -1,0 +1,59 @@
+@import '~stassets/styles/index.scss';
+
+.camera-select {
+	position: relative;
+	// border-bottom: 1px solid #3e454f;
+
+	:global {
+		.ant-modal-header {
+			border-bottom: unset;
+		}
+
+		.ant-modal-footer {
+			border-top: 1px solid $dark-gray;
+		}
+		.ant-modal-body {
+			padding: 0;
+		}
+	}
+}
+
+.analysis-type-select {
+	display: flex;
+	align-items: center;
+	padding: 0 24px;
+	height: 64px;
+	color: $text-second-color;
+}
+
+.camera-select-content {
+	padding: 0 24px;
+	border-top: 1px solid $dark-gray;
+}
+
+.analysis-type-tip {
+	margin-right: 8px;
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+
+	.footer-tip {
+		color: $text-second-color;
+		display: flex;
+		align-items: center;
+		margin-right: auto;
+	}
+
+	.select-count {
+		color: white;
+		margin-left: 8px;
+	}
+}
+
+.cancel {
+	background-color: unset;
+	border-color: $text-second-color;
+	color: $text-second-color;
+}

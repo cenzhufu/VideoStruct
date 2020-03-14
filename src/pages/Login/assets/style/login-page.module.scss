@@ -1,0 +1,245 @@
+@import '~stassets/styles/index.scss';
+$btn-prefix-cls: #{$antd-prefix}-btn;
+$input-prefix-cls: #{$antd-prefix}-input;
+$checkbox-prefix-cls: #{$antd-prefix}-checkbox;
+
+.login-page {
+	// :global {
+	// 	.ant-input {
+	// 		background: rgba(0, 62, 133, 1);
+	// 	}
+	// }
+
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(-135deg, #414b62 0%, #242d3d 100%);
+	overflow: hidden;
+
+	:global {
+		// 自定义antd 样式
+		.#{$btn-prefix-cls} {
+			border-radius: 0;
+			font-size: getpx(16);
+		}
+
+		.#{$input-prefix-cls}:focus {
+			box-shadow: none;
+		}
+
+		.#{$checkbox-prefix-cls} {
+			.#{$checkbox-prefix-cls}-inner {
+				border-radius: 0;
+				border-color: #d9d9d9 !important;
+
+				&::after {
+					left: 22%;
+				}
+			}
+		}
+
+		.ant-checkbox-checked .ant-checkbox-inner,
+		.ant-checkbox-indeterminate .ant-checkbox-inner {
+			background-color: #1890ff !important;
+			border-color: #1890ff !important;
+		}
+	}
+
+	.login-content {
+		position: relative;
+		z-index: 10;
+		width: 1000px;
+		min-width: getratiopx(1130, 0.85);
+		height: 480px;
+		// min-height: getratiopx(697, 0.85);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 20px;
+		overflow: hidden;
+
+		@include respond-below(lg) {
+			height: getpx(500);
+			min-height: getratiopx(500, 0.85);
+		}
+
+		.login-item-form {
+			width: 280px;
+			// min-width: getratiopx(420);
+
+			.login-form-button {
+				width: 100%;
+			}
+		}
+	}
+
+	.login-rights {
+		position: absolute;
+		bottom: 32px;
+		width: 546px;
+		min-width: 420px;
+		height: 22px;
+		font-size: 16px;
+		color: rgba(60, 140, 231, 1);
+		line-height: 22px;
+	}
+}
+
+.left-part {
+	flex: 1 1 50%;
+	height: 100%;
+	background-image: linear-gradient(90deg, #414b62 0%, #242d3d 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.left-bottom-rectangle,
+.right-top-rectangle {
+	background-image: linear-gradient(-90deg, #212735 0%, #30394d 100%);
+	border-radius: 40px;
+	position: absolute;
+}
+
+.left-bottom-rectangle {
+	transform: rotate(314deg);
+	height: 730px;
+	width: 730px;
+	left: -321px;
+	top: 50%;
+}
+
+.right-top-rectangle {
+	transform: rotate(314deg);
+	height: 730px;
+	width: 730px;
+	right: -321px;
+	bottom: 50%;
+}
+
+.image-view {
+	background: url('../images/image-view.png') no-repeat;
+	background-size: 100%;
+	width: 291px;
+	height: 343px;
+}
+
+.right-part {
+	height: 100%;
+	flex: 1 1 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+
+	:global {
+		.ant-input {
+			border: unset;
+			border-bottom: rgba(62, 69, 95, 0.5) solid 1px;
+			border-radius: 0;
+			background-color: white;
+			color: #9da0ab;
+			padding: 10px;
+		}
+
+		.ant-input:focus {
+			background-color: white !important;
+		}
+
+		.ant-form-item {
+			margin-bottom: getpx(24);
+		}
+
+		.ant-form-item-with-help {
+			margin-bottom: 13px;
+		}
+
+		input:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0 1000px white inset !important;
+		}
+
+		.ant-form-explain {
+			text-align: right;
+		}
+	}
+}
+
+.system-info {
+	margin-bottom: getpx(40);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo {
+	background: url('../images/logo.png') no-repeat;
+	background-size: 100%;
+	width: 120px;
+	height: 23px;
+	margin-bottom: 16px;
+}
+
+.system-name {
+	font-size: 28px;
+	color: #262e3f;
+}
+
+.login-button {
+	margin-top: getpx(40);
+	background-color: #0a7bff;
+	font-size: 16px;
+	color: #fff;
+
+	&:hover {
+		background-color: #0a7bff;
+		font-size: 16px;
+		color: #fff;
+	}
+
+	&:focus {
+		background-color: #0a7bff;
+		font-size: 16px;
+		color: #fff;
+	}
+
+	&:active {
+		background-color: #0a7bff;
+		font-size: 16px;
+		color: #fff;
+	}
+}
+
+.login-error {
+	border-bottom: 1px solid red !important;
+}
+
+.login-error-text {
+	position: absolute;
+	right: 0;
+	height: 20px;
+	top: 20px;
+	text-align: center;
+	color: #f0382b;
+}
+
+.login-account-error {
+	border-bottom: 1px solid red !important;
+}
+
+.login-keep {
+	position: absolute;
+	left: 0;
+	height: getpx(20);
+	top: getpx(26);
+
+	.keep-login-text {
+		font-size: getpx(12);
+		color: $text-color;
+		text-align: left;
+	}
+}

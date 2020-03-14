@@ -1,0 +1,32 @@
+@import '~stassets/styles/index.scss';
+
+.face-item {
+	width: getpx(262);
+	padding: getpx(12) getpx(16);
+	background-color: #161b2b;
+	// box-shadow: 0 0 24px 0 #04070d;
+	position: relative;
+	display: flex;
+}
+
+.face-attribute-item {
+	width: getpx(120);
+	height: getpx(120);
+	flex: 0 0 auto;
+}
+
+.other-info {
+	margin-left: getpx(12);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: getpx(120);
+}
+
+.structural-face-attribute-item {
+	margin-bottom: getpx(8);
+}
+
+.structural-face-attribute-item-title {
+	margin-right: getpx(8);
+}

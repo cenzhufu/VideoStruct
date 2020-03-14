@@ -1,0 +1,36 @@
+@import '~stassets/styles/index.scss';
+
+.tree-title {
+	width: calc(100% - 20px);
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	// overflow-x: hidden;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	// max-width: 75%;
+}
+
+.title {
+	margin-right: getpx(10);
+	max-width: getpx(100);
+	@include text-trunk();
+}
+
+.icon {
+	margin-left: auto;
+	margin-right: getpx(8);
+}
+
+.count {
+	margin-left: auto;
+	height: getpx(20);
+	line-height: getpx(20);
+	padding: 0 10px;
+	border-radius: 10px;
+	color: #fff;
+	background: rgba(255, 255, 255, 0.2);
+}

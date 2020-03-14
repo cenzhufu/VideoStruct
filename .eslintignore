@@ -1,0 +1,6 @@
+public
+config
+scripts
+*.d.ts
+src/serviceWorker.ts
+vendors/cropperjs/**/*

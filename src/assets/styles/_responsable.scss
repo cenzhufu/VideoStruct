@@ -1,0 +1,8 @@
+@import './mixin.scss';
+@import './utils';
+
+@mixin responsable-fontsize($size, $minDimension: 1080) {
+	@include respond-above(xxlg) {
+		font-size: $size * getscale(xxlg, $minDimension);
+	}
+}

@@ -1,0 +1,2 @@
+import VehicleLicenseColorAttributesSelectPanel from './src/VehicleLicenseColorAttributesSelectPanel';
+export default VehicleLicenseColorAttributesSelectPanel;

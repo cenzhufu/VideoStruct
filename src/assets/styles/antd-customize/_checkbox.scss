@@ -1,0 +1,12 @@
+@import '~stassets/styles/index.scss';
+
+$checkbox-prefix-cls: #{$antd-prefix}-checkbox;
+$checkbox-inner-prefix-cls: #{$checkbox-prefix-cls}-inner;
+
+.#{$checkbox-prefix-cls} {
+	&-group {
+		&-item {
+			// color: $text-second-color;
+		}
+	}
+}

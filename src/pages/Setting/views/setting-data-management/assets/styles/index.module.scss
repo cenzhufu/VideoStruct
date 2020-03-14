@@ -1,0 +1,134 @@
+@import '~stassets/styles/index.scss';
+
+.data-management-all {
+	:global {
+		.action svg {
+			color: $text-second-color;
+		}
+	}
+
+	height: 100%;
+	// background: $component-background-color;
+	border-radius: $card-radius;
+	margin-left: getvw(24);
+	display: flex;
+	flex-direction: column;
+}
+
+.data-management-block {
+	height: 48px;
+	line-height: 48px;
+	margin-bottom: 24px;
+	color: $text-color;
+	flex: 0 0 auto;
+}
+
+.data-management-title {
+	font-size: 18px;
+	font-family: PingFang-SC-Medium, Arial, sans-serif;
+	font-weight: 500;
+	margin: getvh(12) 0 0 getvw(24);
+}
+
+.data-filter {
+	position: relative;
+	margin-left: 0 0 getvh(24) getvw(16);
+	display: flex;
+	align-items: center;
+	flex: 0 0 auto;
+}
+
+.data-filter-add-button {
+	border-radius: $card-radius;
+	margin-left: getvw(24);
+}
+
+.data-choose-title {
+	font-size: 14px;
+	font-family: PingFangSC-Medium, Arial, sans-serif;
+	font-weight: 500;
+	margin: 0 getvh(10) 0 getvw(32);
+}
+
+.data-choose-menus {
+	width: getvw(320);
+	height: getvh(32);
+	border-radius: $card-radius;
+	font-family: PingFangSC-Semibold, Arial, sans-serif;
+	font-weight: 400;
+}
+
+.data-content-date {
+	width: getvw(234);
+	height: getvh(40);
+	border-radius: $card-radius;
+}
+
+.data-search-area {
+	width: getvw(500);
+	background: #f2f4f5;
+	border-radius: $card-radius;
+	// border: 1px solid $dark-gray;
+}
+
+.data-table-content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.data-table-show {
+	height: 100%;
+	overflow-y: scroll;
+	margin: 24px 0 40px 0;
+
+	table {
+		button {
+			margin-left: 8px;
+		}
+	}
+}
+
+.data-table-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.data-management-table-file-type {
+	width: getvw(150);
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.account-data-operation {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.data-management-view {
+	font-size: 14px;
+	font-family: PingFangSC-Regular，Arial, sans-serif;
+	font-weight: 400;
+	// color: $component-foreground-color;
+}
+
+.data-management-delete {
+	font-size: 14px;
+	font-family: PingFangSC-Regular，Arial, sans-serif;
+	font-weight: 400;
+	color: rgba(255, 60, 47, 1);
+	line-height: getvh(20);
+}
+
+.data-management-delete .data-management-view {
+	width: getvw(80);
+	height: getvh(32);
+	border-radius: $card-radius;
+	border: 1px solid $component-foreground-color;
+	display: inline-block;
+	text-align: center;
+}

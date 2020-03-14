@@ -1,0 +1,38 @@
+@import '~stassets/styles/index.scss';
+
+.structural-item-face {
+	border-radius: $card-radius;
+	width: getpx(100);
+	height: getpx(100);
+}
+
+.structural-item-face-text {
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+
+.structural-item-face-info {
+	position: relative;
+}
+
+.structural-item-box:hover::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	background-color: #fff;
+	width: getpx(116);
+	height: getpx(146);
+	top: -8px;
+	left: -8px;
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.structural-item-face-tip {
+	position: relative;
+	width: getpx(100);
+	height: getpx(20);
+	margin-top: getpx(8);
+	font-size: 12px;
+	@include text-trunk();
+}

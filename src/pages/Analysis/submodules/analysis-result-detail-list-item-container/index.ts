@@ -1,0 +1,2 @@
+import AnalysisResultDetailListItemContainer from './AnalysisResultDetailListItemContainer';
+export default AnalysisResultDetailListItemContainer;

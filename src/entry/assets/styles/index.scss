@@ -1,0 +1,19 @@
+@import '~stassets/styles/index.scss';
+
+#root {
+	height: 100%;
+}
+
+// 限制页面的宽度
+body {
+	min-width: 1280px;
+	min-height: 630px;
+	overflow: hidden;
+	color: $text-second-color !important;
+}
+
+// 一些reset
+ul {
+	list-style-type: none;
+	padding-inline-start: 0;
+}
